@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>SIM Kepegawaian DIY - Manajemen Surat</title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/switchery.min.css">
+  <script type="text/javascript" src="js/switchery.min.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+  
+  <h1>Manajemen Surat</h1>
+  
+  <form onsubmit="return false">
+  <div class="col-2">
+    <label>
+      NIP
+      <input placeholder="Berapakah NIP pegawai ini?" id="nip" name="nip" tabindex="1">
+    </label>
+  </div>
+  <div class="col-2">
+    <label>
+      Nama
+      <input placeholder="Siapakah namanya?" id="name" name="name" tabindex="2">
+    </label>
+  </div>
+  
+  <div class="col-3">
+    <label>
+      Unit
+      <select tabindex="3">
+        <option>TK ABA LEMPUYANGAN	</option>
+		<option>TK ABA MUBAROK	</option>
+		<option>TK Lempuyangwangi	</option>
+		<option>TK PURBORINI	</option>
+		<option>TK GEMBLAKAN BAWAH	</option>
+		<option>TK LEDOK TUKANGAN	</option>
+		<option>TK PUTRA HARAPAN	</option>
+		<option>TK RK TEGAL LEMPUYANGAN	</option>
+		<option>TK SURYATMAJAN	</option>
+		<option>TK TRISULA PERWARI 	</option>
+		<option>TK ABA NOTOYUDAN	</option>
+		<option>TK INDRIYASANA MA	</option>
+		<option>TK KANISIUS NOTOYUDAN	</option>
+		<option>TK MARDILUWIH	</option>
+		<option>TK NETRAL	</option>
+		<option>TK ABA GEDONGTENGEN	</option>
+		<option>TK ABA PRINGGOKUSUMAN	</option>
+		<option>TK KARTIKA	</option>
+		<option>TK PAJEKSAN	</option>
+		<option>TK PKK SOSROWIJAYAN	</option>
+		<option>TK JOGONEGARAN	</option>
+		<option>TK ABA AL IMAN	</option>
+		<option>TK ABA SAPEN 	</option>
+		<option>TK CERIA	</option>
+		<option>TK KANISIUS KOTABARU	</option>
+		<option>TK KEMALA BHAYANGKARI 02	</option>
+		<option>TK KREATIF PRIMAGAMA	</option>
+		<option>TK. Kusuma 	</option>
+		<option>TK Masjid Syuhada	</option>
+		<option>TK YWKA	</option>
+		<option>TK ABA CEMPAKA	</option>
+		<option>TK AL FAJAR	</option>
+		<option>TK BAITUL HIKMAH	</option>
+		<option>TK BINA PUTRA	</option>
+		<option>TK BOPKRI GONDOKUSUMAN	</option>
+		<option>TK BOPKRI UNGARAN 	</option>
+		<option>TK DHARMARINI	</option>
+		<option>TK GRHA ASIH ANAK	</option>
+		<option>TK INDRIYASANA BACIRO	</option>
+		<option>TK KARTIKA III-34	</option>
+		<option>TK KLITREN LOR	</option>
+		<option>TK KUNCUNG	</option>
+		<option>TK Purbonegaran	</option>
+		<option>TK AL-HASANAH	</option>
+		<option>TK MARSUDI PUTRO TERBAN	</option>
+		<option>TK ABA KAUMAN	</option>
+		<option>TK MATER DEI MARSUDIRINI	</option>
+		<option>TK MEKAR SARI	</option>
+		<option>TK PANGUDI LUHUR YOGYAKARTA	</option>
+		<option>TK KUTILANG	</option>
+		<option>TK ABA NURUSY SYUBBAN	</option>
+		<option>TK ABA JOGOYUDAN	</option>
+		<option>TK BOPKRI GONDOLAYU	</option>
+		<option>TK BUDYA WACANA	</option>
+		<option>TK BUMIJO	</option>
+		<option>TK PUTRA BADRAN	</option>
+		<option>TK TAMAN INDRIA JETIS YOGYAKARTA	</option>
+		<option>TK TARAKANITA	</option>
+		<option>TK AL-AMIEN	</option>
+		<option>TK COKRODININGRATAN	</option>
+		<option>TK INDRIYASANA	</option>
+		<option>TK KEMALA BHAYANGKARI 01 JETIS	</option>
+		<option>TK PASIRAMAN	</option>
+		<option>TK KYAI MOJO	</option>
+		<option>TK MEKAR KUSUMA 	</option>
+		<option>TK ABA JETIS YOGYAKARTA	</option>
+		<option>TK 'AISYIYAH NYAI AHMAD DAHLAN	</option>
+		<option>TK ABA AL-ANAB	</option>
+		<option>TK ABA AL ISHLAH	</option>
+		<option>TK ABA DALEM 	</option>
+		<option>TK ABA DEPOKAN	</option>
+		<option>TK ABA KLECO	</option>
+		<option>TK ABA Komplek Masjid Perak Kotagede	</option>
+		<option>TK ABA MUSHOLLA	</option>
+		<option>TK ABA PURBAYAN	</option>
+		<option>TK ABA REJOWINANGUN	</option>
+		<option>TK MA'HAD ISLAMY	</option>
+		<option>TK MASJID YASMIN	</option>
+		<option>TK RK GEDONGKUNING	</option>
+		<option>TAMAN KANAK-KANAK 17 AGUSTUS PILAHAN	</option>
+		<option>TK ABA TEGAL GENDU	</option>
+		<option>TK INDRIYASANA UTAMA	</option>
+		<option>TK MARGAJAYA	</option>
+		<option>TK Nurul Ummah	</option>
+		<option>TK ABA KADIPATEN KULON	</option>
+		<option>TK ABA PATEHAN	</option>
+		<option>TK ABA SILIRAN	</option>
+		<option>TK ABA SURYOCONDRO	</option>
+		<option>ABA UKHUWAH ISLAMIYAH	</option>
+		<option>TK BHAKTI MANUNGGAL	</option>
+		<option>TK MAWAR	</option>
+		<option>TK ABA ADE IRMA	</option>
+		<option>TK BUDI ASIH	</option>
+		<option>TK MELATI	</option>
+		<option>TK TEJOKUSUMAN	</option>
+		<option>TK YAYASAN PENDIDIKAN "17" I	</option>
+		<option>TK IT MEKAR INSANI	</option>
+		<option>TK ABA DANUNEGARAN	</option>
+		<option>TK ABA DUKUH	</option>
+		<option>TK ABA Jogokaryan	</option>
+		<option>ABA NGADINEGARAN YOGYAKARTA	</option>
+		<option>TK BATIK PPBI YOGYAKARTA	</option>
+		<option>TK Indriyasana Pugeran	</option>
+		<option>TK Pedagogia	</option>
+		<option>TK PKK MINGGIRAN	</option>
+		<option>TK ABA GEDONGKIWO	</option>
+		<option>TK ABA SURYOWIJAYAN	</option>
+		<option>TK Dwi Jaya Kumendaman	</option>
+		<option>TK Kusuma Pugeran	</option>
+		<option>TK MARDISIWI JOGOKARYAN	</option>
+		<option>TK PKK GEDONGKIWO	</option>
+		<option>TK PUTRA SURYA	</option>
+		<option>TK SURYOININGRATAN	</option>
+		<option>TK KANISIUS KUMENDAMAN	</option>
+		<option>TK RUMAH CITTA	</option>
+		<option>TK ABA KARANGANYAR 	</option>
+		<option>TK ABA KARANGKAJEN	</option>
+		<option>TK ABA KARANGKUNTI	</option>
+		<option>BUDI MULIA DUA	</option>
+		<option>TK ISLAM TIMURAN	</option>
+		<option>TK KANISIUS KINTELAN	</option>
+		<option>TK PKK MARGO ASIH	</option>
+		<option>TK PAMARDISIWI	</option>
+		<option>TK PKK PRAWIROTAMAN	</option>
+		<option>TK PWS SUROKARSAN	</option>
+		<option>TK TAMAN INDRIA IBU PAWIYATAN TAMANSISWA	</option>
+		<option>TK ABA MERGANGSAN KIDUL	</option>
+		<option>PAMARDI PUTRA	</option>
+		<option>TK PKK BUDI RAHAYU	</option>
+		<option>TK PKK KEPARAKAN LOR	</option>
+		<option>TK PUJOKUSUMAN	</option>
+		<option>TK PUTRA JAYA BRONTOKUSUMAN	</option>
+		<option>TK TRISULA RK BINTARAN	</option>
+		<option>TK ABA GENDINGAN	</option>
+		<option>TK ABA Ngadiwinatan	</option>
+		<option>TK ABA NGAMPILAN	</option>
+		<option>TK ABA Purwodiningratan	</option>
+		<option>TK ABA SURONATAN	</option>
+		<option>TK Kemala Bhayangkari 04	</option>
+		<option>TK ABA NOTOPRAJAN	</option>
+		<option>TK RK PATUK	</option>
+		<option>TK ABA BAITUL IHSAN	</option>
+		<option>TK ABA MASJID MARGOYOSO	</option>
+		<option>TK MARSUDISIWI	</option>
+		<option>TK RK PURWOKINANTI	</option>
+		<option>TK DHARMA BAKTI	</option>
+		<option>TK RK JAGALAN BEJI	</option>
+		<option>TK ABA GUNUNGKETUR	</option>
+		<option>TK PERTIWI PAKU ALAMAN	</option>
+		<option>TK ABA KARANGWARU LOR	</option>
+		<option>TK ABA KRICAK	</option>
+		<option>TK BUYUNG	</option>
+		<option>TK JATIMULYO	</option>
+		<option>TK Kristen Kalam Kudus	</option>
+		<option>TK MUTIARA PERSADA	</option>
+		<option>TK ABA TEGALREJO	</option>
+		<option>TK AMONG PUTRA	</option>
+		<option>TK BENER	</option>
+		<option>TK BOPKRI JATIMULYO	</option>
+		<option>TK DARMA BHAKTI	</option>
+		<option>TK KRICAK KIDUL	</option>
+		<option>TK MARDISIWI	</option>
+		<option>TK TOMPEYAN	</option>
+		<option>TK Negeri 2 Yogyakarta	</option>
+		<option>TK NEGERI PEMBINA	</option>
+		<option>TK Negeri 2 Yogyakarta	</option>
+		<option>TK & pg KREATIF PRIMAGAMA 	</option>
+		<option>TK ABA AL-MUHAJIRIN	</option>
+		<option>TK ABA GIWANGAN	</option>
+		<option>TK ABA JANTURAN	</option>
+		<option>TK ABA MILIRAN	</option>
+		<option>TK ABA NITIKAN	</option>
+		<option>TK ABA PANDEYAN I	</option>
+		<option>TK ABA PONGGALAN	</option>
+		<option>TK ABA WARUNGBOTO	</option>
+		<option>TK BINA ANAK SHOLEH	</option>
+		<option>TK BUMI WARTA	</option>
+		<option>TK ISLAM TARBIYATUL ATHFAL AL-FURQON	</option>
+		<option>TK Islam Tunas Melati	</option>
+		<option>TKIT Al-Khairaat 	</option>
+		<option>TKIT SALMAN AL FARISI 1	</option>
+		<option>TK KARTIKA IV-5	</option>
+		<option>TK KATOLIK SANG TIMUR	</option>
+		<option>TK MARDI PUTRA	</option>
+		<option>TK MASYITHOH 	</option>
+		<option>TK PAMARDISIWI GAMBIRAN	</option>
+		<option>TK ISLAM PELANGI ANAK	</option>
+		<option>TK PIRI Nitikan	</option>
+		<option>TK SEDYO UTOMO	</option>
+		<option>TK TAHUNAN	</option>
+		<option>TK TUNAS MUDA	</option>
+		<option>TK ABA PANDEYAN II	</option>
+		<option>TK ABA WIROSABAN	</option>
+		<option>TK Balirejo	</option>
+		<option>TK PAMARDISIWI MUJA-MUJU	</option>
+		<option>TK AL - WARDAH	</option>
+		<option>TK ISLAM PLUS AL IKHLASH	</option>
+		<option>TK ABA KETANGGUNGAN	</option>
+		<option>TK ABA KUNCEN I 	</option>
+		<option>TK ABA SINDUREJAN	</option>
+		<option>TK BOPKRI WIROBRAJAN	</option>
+		<option>TK ISLAM AL- HAQ	</option>
+		<option>TK KANISIUS WIROBRAJAN	</option>
+		<option>TK komimo playschool	</option>
+		<option>TK KUNCUP MEKAR	</option>
+		<option>TK RK KUNCEN	</option>
+		<option>TK RKA SINDUREJAN	</option>
+		<option>TK ABA KUNCEN 2	</option>
+		<option>TK ABA PATANGPULUHAN	</option>
+		<option>TK ABA TEGALMULYO	</option>
+		<option>TK ABA WIROBRAJAN I	</option>
+		<option>TK ABA WIROBRAJAN II	</option>
+		<option>TK KARTINI	</option>
+		<option>TK ABA SINGOSAREN	</option>
+		<option>TK ISLAM BINTANG KECIL	</option>
+		<option>RA AL HUSNA	</option>
+		<option>RA AL-KHAIRAAT TEGALREJO	</option>
+		<option>RA BUNAYYA	</option>
+		<option>SD NEGERI WIDORO	</option>
+		<option>SD NEGERI TEGALPANGGUNG	</option>
+		<option>SD Negeri Lempuyangan 1	</option>
+		<option>SD NEGERI LEMPUYANGWANGI	</option>
+		<option>SD SOSROWIJAYAN	</option>
+		<option>SD NEGERI GEDONGTENGEN	</option>
+		<option>SDN Baciro Yogyakarta	</option>
+		<option>SD NEGERI LANGENSARI	</option>
+		<option>SD NEGERI DEMANGAN	</option>
+		<option>SD NEGERI TERBANSARI 1	</option>
+		<option>SD NEGERI SERAYU	</option>
+		<option>SD NEGERI KLITREN	</option>
+		<option>SD NEGERI SAGAN 	</option>
+		<option>SD Negeri Bhayangkara	</option>
+		<option>SD UNGARAN 1	</option>
+		<option>SDN SAYIDAN	</option>
+		<option>SD Negeri Ngupasan	</option>
+		<option>SD COKROKUSUMAN	</option>
+		<option>SD NEGERI JETIS 2	</option>
+		<option>SD NEGERI KYAI MOJO	</option>
+		<option>SD NEGERI VIDYA QASANA YOGYAKARTA	</option>
+		<option>SD NEGERI BADRAN	</option>
+		<option>SD JETIS 1	</option>
+		<option>SD NEGERI GONDOLAYU	</option>
+		<option>SD NEGERI BUMIJO	</option>
+		<option>SD NEGERI JETISHARJO	</option>
+		<option>SD NEGERI BALUWARTI	</option>
+		<option>SD KARANGMULYO	</option>
+		<option>SD NEGERI KARANGSARI	</option>
+		<option>SD NEGERI KOTAGEDE 5	</option>
+		<option>SD NEGERI PILAHAN	</option>
+		<option>SD NEGERI RANDUSARI	</option>
+		<option>SDN REJOWINANGUN 2	</option>
+		<option>SD N Rejowinangun 3	</option>
+		<option>SD NEGERI GEDONGKUNING	</option>
+		<option>SD NEGERI REJOWINANGUN 1	</option>
+		<option>SD Negeri Kotagede 1 	</option>
+		<option>SD Negeri Dalem	</option>
+		<option>SD KOTAGEDE 4	</option>
+		<option>SDN PANEMBAHAN	</option>
+		<option>SDN KEPUTRAN 2 YOGYAKARTA	</option>
+		<option>SD NEGERI KRATON YOGYAKARTA	</option>
+		<option>SD NEGERI KEPUTRAN 1	</option>
+		<option>SD NEGERI KEPUTRAN A YOGYAKARTA	</option>
+		<option>SD NEGERI MINGGIRAN	</option>
+		<option>SD N SURYODININGRATAN 2	</option>
+		<option>SD NEGERI SURYOWIJAYAN	</option>
+		<option>SD NEGERI GEDONGKIWO	</option>
+		<option>SDN SURYODININGRATAN I	</option>
+		<option>SD NEGERI SURYODININGRATAN 3	</option>
+		<option>SD NEGERI KARANGANYAR	</option>
+		<option>SD NEGERI KINTELAN 1	</option>
+		<option>SD NEGERI KINTELAN 2	</option>
+		<option>SD NEGERI PRAWIROTAMAN	</option>
+		<option>SD NEGERI TIMURAN	</option>
+		<option>SDN SUROKARSAN 2	</option>
+		<option>SD NEGERI PUJOKUSUMAN 1	</option>
+		<option>SD NEGERI NGABEAN	</option>
+		<option>SD NEGERI SERANGAN	</option>
+		<option>SD PURO PAKUALAMAN 1	</option>
+		<option>SD NEGERI MARGOYASAN	</option>
+		<option>SDN TUKANGAN	</option>
+		<option>SD N TEGALREJO I YOGYAKARTA	</option>
+		<option>SD NEGERI BANGUNREJO I	</option>
+		<option>SD BENER	</option>
+		<option>SD NEGERI KARANGREJO 	</option>
+		<option>SD NEGERI PINGIT	</option>
+		<option>SD PETINGGEN	</option>
+		<option>SDN TEGALREJO 3	</option>
+		<option>SD NEGERI BANGUNREJO 2	</option>
+		<option>SD NEGERI BANGIREJO I	</option>
+		<option>SD N BLUNYAHREJO	</option>
+		<option>SD N Tegalrejo 2	</option>
+		<option>SD N MENDUNGAN 2	</option>
+		<option>SDN PANDEYAN	</option>
+		<option>SD NEGERI WARUNGBOTO	</option>
+		<option>SD Negeri Kotagede 3 Yogyakarta	</option>
+		<option>SD NEGERI PAKEL	</option>
+		<option>SD GLAGAH	</option>
+		<option>SDN Gambiran	</option>
+		<option>SD NEGERI WIROSABAN	</option>
+		<option>SD NEGERI GOLO	</option>
+		<option>SD NEGERI MENDUNGAN 1	</option>
+		<option>SD NEGERI GIWANGAN	</option>
+		<option>SD N Tahunan Yogyakarta	</option>
+		<option>SD NEGERI PATANGPULUHAN	</option>
+		<option>SD Tamansari 2	</option>
+		<option>SD N TAMANSARI 3	</option>
+		<option>SD NEGERI TEGALMULYO	</option>
+		<option>SD NEGERI TAMANSARI I YOGYAKARTA 	</option>
+		<option>SD Muhammadiyah Bausasran I	</option>
+		<option>SD Muhammadiyah Bausasran II	</option>
+		<option>SD MUHAMMADIYAH PRINGGOKUSUMAN	</option>
+		<option>SD NETRAL C	</option>
+		<option>SD KANISIUS NOTOYUDAN 	</option>
+		<option>SD NETRAL D YOGYAKARTA	</option>
+		<option>SD MASJID SYUHADA'	</option>
+		<option>SD MUHAMMADIYAH SAPEN 1 YOGYAKARTA	</option>
+		<option>SD Kanisius Baciro Joannes Bosco	</option>
+		<option>SD KANISIUS KOTABARU 1	</option>
+		<option>SD MUHAMMADIYAH GENDENG	</option>
+		<option>SD MUHAMMADIYAH SAGAN	</option>
+		<option>SD Muhammadiyah Demangan	</option>
+		<option>SD MUHAMMADIYAH SAPEN 2	</option>
+		<option>SD Kanisius Gayam I	</option>
+		<option>SD JUARA	</option>
+		<option>SD PANGUDI LUHUR 1 YOGYAKARTA	</option>
+		<option>SD PANGUDI LUHUR 2	</option>
+		<option>Pangudi Luhur 3 Yogyakarta	</option>
+		<option>SD PANGUDI LUHUR 4	</option>
+		<option>SD MARSUDIRINI 1	</option>
+		<option>SD MARSUDIRINI 2	</option>
+		<option>SD MUHAMMADIYAH KAUMAN	</option>
+		<option>SD TAMANSISWA JETIS	</option>
+		<option>SD BUDYA WACANA II	</option>
+		<option>SD BUDYA WACANA I	</option>
+		<option>SD BOPKRI GONDOLAYU	</option>
+		<option>SD TARAKANITA BUMIJO 2 YOGYAKARTA	</option>
+		<option>SD Tumbuh	</option>
+		<option>SD TARAKANITA BUMIJO I YOGYAKARTA	</option>
+		<option>SD KANISIUS GOWONGAN	</option>
+		<option>BHINNEKA TUNGGAL IKA NATIONAL PLUS SCHOOL	</option>
+		<option>SD MUHAMMADIYAH KLECO 3	</option>
+		<option>SD MUHAMMADIYAH KLECO 2	</option>
+		<option>SD MUHAMMADIYAH PURBAYAN	</option>
+		<option>SD MUHAMMADIYAH KLECO 1	</option>
+		<option>MI MA'HAD ISLAMY 	</option>
+		<option>SD INTIS SCHOOL YOGYAKARTA	</option>
+		<option>SD MUHAMMADIYAH JOGOKARIYAN	</option>
+		<option>SD MUHAMMADIYAH DANUNEGARAN	</option>
+		<option>SD MUHAMMADIYAH SURYOWIJAYAN	</option>
+		<option>SD KANISIUS PUGERAN I	</option>
+		<option>SD KANISIUS KUMENDAMAN	</option>
+		<option>SD KANISIUS KINTELAN I	</option>
+		<option>SD BOPKRI Bintaran	</option>
+		<option>SD TAMAN MUDA IBU PAWIYATAN	</option>
+		<option>SD MUHAMMADIYAH KARANGKAJEN II YOGYAKARTA	</option>
+		<option>SD MUHAMMADIYAH KARANGKAJEN 1 YOGYAKARTA	</option>
+		<option>SD MUHAMMADIYAH SURONATAN YOGYAKARTA	</option>
+		<option>SD MUHAMMADIYAH NGUPASAN 1 YOGYAKARTA	</option>
+		<option>SD MUHAMMADIYAH NGUPASAN 2 YOGYAKARTA	</option>
+		<option>SD MUHAMMADIYAH PURWODININGRATAN 1	</option>
+		<option>SD MUHAMMADIYAH  PURWODININGRATAN 2	</option>
+		<option>SD MUHAMMADIYAH NGADIWINATAN	</option>
+		<option>SD Muhammadiyah Notoprajan 	</option>
+		<option>SD ISLAMIYAH PAKUALAMAN	</option>
+		<option>SD MUHAMMADIYAH KARANGWARU	</option>
+		<option>SD BOPKRI KARANGWARU	</option>
+		<option>SD MUHAMMADIYAH TEGALREJO	</option>
+		<option>SD KRISTEN KALAM KUDUS	</option>
+		<option>SD Muhammadiyah Miliran	</option>
+		<option>SD PIRI Nitikan	</option>
+		<option>SD KANISIUS SANG TIMUR	</option>
+		<option>SD MUHAMMADIYAH PAKEL	</option>
+		<option>SD ISLAMIYAH WARUNGBOTO	</option>
+		<option>SD Muhammadiyah Warungboto	</option>
+		<option>SDIT AL-KHAIRAAT	</option>
+		<option>SDIT BINA ANAK SHOLEH	</option>
+		<option>SD MUHAMMADIYAH SOKONANDI 1	</option>
+		<option>SD MUHAMMADIYAH SOKONANDI 2	</option>
+		<option>SD ISLAM TERPADU LUQMAN AL HAKIM	</option>
+		<option>SD MUHAMMADIYAH WIROBRAJAN 1	</option>
+		<option>SD Muhammadiyah Wirobrajan 3	</option>
+		<option>SD BOPKRI WIROBRAJAN	</option>
+		<option>SD KANISIUS TEGALMULYO	</option>
+		<option>SD Muhammadiyah Wirobrajan 2	</option>
+		<option>SD KANISIUS WIROBRAJAN 1	</option>
+		<option>SD NEGERI BALIREJO	</option>
+		<option>MIN YOGYAKARTA II	</option>
+		<option>SD NEGERI SINDUREJAN	</option>
+
+      </select>
+    </label>
+  </div>
+  <div class="col-3">
+    <label>
+      Jabatan
+      <select tabindex="4">
+        <option>Guru</option>
+        <option>Guru Pertama</option>
+        <option>Guru Muda</option>
+		<option>Guru Madya</option>
+      </select>
+    </label>
+  </div>
+  <div class="col-3">
+    <label>
+      Tugas Tambahan
+      <select tabindex="5">
+        <option>Kepala Sekolah</option>
+        <option>Wakil Kepala Sekolah</option>
+        <option>Kepala Lab</option>
+		<option>Kepala Perpustakaan</option>
+      </select>
+    </label>
+  </div>
+  
+  <div class="col-4">
+    <label>
+      NUPTK
+      <input placeholder="Masukkan NUPTK" id="nuptk" name="nuptk" tabindex="6">
+    </label>
+  </div>
+  <div class="col-4">
+    <label>
+      Nomor Seri Kartu Pegawai
+      <input placeholder="Masukkan Nomor Seri Kartu Pegawai" id="nskp" name="nskp" tabindex="7">
+    </label>
+  </div>
+  <div class="col-4">
+    <label>
+	TMT
+    <input placeholder="Masukkan TMT" id="tmt" name="tmt" tabindex="8">
+	</label>
+  </div>
+  <div class="col-4 switch">
+    <label>Simpan Data</label>
+    <center style="position:relative;margin-bottom:8px;"><input type="checkbox" class="js-switch"></center>
+  </div>
+  
+  <div class="col-submit">
+    <button class="submitbtn">Cetak</button>
+  </div>
+  
+  </form>
+  </div>
+<script type="text/javascript">
+var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+
+elems.forEach(function(html) {
+  var switchery = new Switchery(html);
+});
+</script>
+</body>
+</html>
