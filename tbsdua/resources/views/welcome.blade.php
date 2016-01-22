@@ -23,11 +23,11 @@
  <form role="form" id="form1" method="post" action="demo_merge.php" class="col-md-4 well">
       <label class="control-label" for="lunch">Jenis Surat:</label>
     <div class="form-group">
-      <select id="lunch" class="selectpicker" data-live-search="true" title="Pilih Jenis Surat" >
-       <option value="1">Cuti Besar</option>
-        <option value="2">Cuti Haji Umroh</option>
-        <option value="3">Cuti Tahunan Penting</option>
-        <option value="4">Ijin Belajar</option>
+      <select id="lunch" name="tpl" class="selectpicker" data-live-search="true" title="Pilih Jenis Surat" >
+       <option value="demo1.docx">Cuti Besar</option>
+        <option value="demo2.docx">Cuti Haji Umroh</option>
+        <option value="demo3.docx">Cuti Tahunan Penting</option>
+        <option value="demo_ms_word.docx">Ijin Belajar</option>
         <option value="5">Ijin Cuti Bersalin Naban</option>
         <option value="6">Ijin Cuti Bersalin</option>
         <option value="7">Ijin Cuti Sakit Walikota</option>
@@ -59,26 +59,6 @@
       <input name="NIP" id="NIP" type="text" class="form-control"/>
 </div>
 
-<label class="control-label" for="tplt">Jenis File Output: </label>
-<div class="form-group">
-  
-      <select name="tpl" id="tplt" class="selectpicker" data-live-search="true">
-        <!--
-        <option value="demo_oo_text.odt">OpenOffice Writer Document (.odt)</option>
-        <option value="demo_oo_spreadsheet.ods">OpenOffice Calc Spreadsheet (.ods)</option>
-        <option value="demo_oo_presentation.odp">OpenOffice Impress Presentation (.odp)</option>
-        -->
-        
-         <option value="demo1.docx">Demo1(.docx)</option>
-        <option value="demo2.docx">Demo2(.docx)</option>
-        <option value="demo3.docx">Demo3(.docx)</option>
-        <option value="demo_oo_graph.odg">OpenOffice Draw Graphic (.odg)</option>
-        <option value="demo_oo_formula.odf">OpenOffice Math Formula (.odf)</option>
-        <option value="demo_ms_word.docx">Ms Word Document (.docx)</option>
-        <option value="demo_ms_excel.xlsx">Ms Excel SpreadSheet (.xlsx)</option>
-        <option value="demo_ms_powerpoint.pptx">Ms PowerPoint Presentation (.pptx)</option>
-      </select>
-      </div>
 
 
 
