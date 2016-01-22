@@ -32,15 +32,17 @@ if ($conn->connect_error) {
 } 
 
 
-$sql = "SELECT nama FROM tabeltbs where id = '1'";
-$result = $conn->query($sql);
-
-$row = $result->fetch_assoc();
-
 // Retrieve the user name to display
 $NIP = (isset($_POST['NIP'])) ? $_POST['NIP'] : '';
 $NIP = trim(''.$NIP);
 if ($NIP=='') $NIP = "(no name)";
+
+$sql = "SELECT nama FROM tabeltbs where id = '$NIP'";
+
+$result = $conn->query($sql);
+
+$row = $result->fetch_assoc();
+
 
 $nama = $row["nama"];
 /*
