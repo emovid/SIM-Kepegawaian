@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bootstrap-select test page</title>
+  <title>SIM-Kepegawaian</title>
 
   <meta charset="utf-8">
 
