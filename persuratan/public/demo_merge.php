@@ -20,9 +20,9 @@ $TBS->Plugin(TBS_INSTALL, OPENTBS_PLUGIN); // load the OpenTBS plugin
 // ------------------------------
 
 // Retrieve the user name to display
-$yourname = (isset($_POST['yourname'])) ? $_POST['yourname'] : '';
-$yourname = trim(''.$yourname);
-if ($yourname=='') $yourname = "(no name)";
+$NIP = (isset($_POST['NIP'])) ? $_POST['NIP'] : '';
+$NIP = trim(''.$NIP);
+if ($NIP=='') $NIP = "(no name)";
 
 // A recordset for merging tables
 $data = array();
@@ -41,8 +41,8 @@ $x_delete = 1;
 // -----------------
 // Load the template
 // -----------------
-
-$template = 'demo_ms_word.docx';
+$template = (isset($_POST['tpl'])) ? $_POST['tpl'] : '';
+//$template = 'demo_ms_word.docx';
 $TBS->LoadTemplate($template, OPENTBS_ALREADY_UTF8); // Also merge some [onload] automatic fields (depends of the type of document).
 
 // ----------------------

@@ -117,21 +117,24 @@
         <option value="24">Tugas 1</option>
         <option value="25">Tugas 2</option>
         <option value="26">Undangan</option>
-
-
       </select></td>
     </tr>
 
     <tr>
       <td scope="col">Masukkan NIP :</td>
-      <td scope="col"><input name="yourname" type="text" size="10" /> <i>(will be displayed in the merged result)</i></td>
+      <td scope="col"><input name="NIP" type="text" size="10" /> <i>(will be displayed in the merged result)</i></td>
     </tr>
     <tr>
       <td>Choose a template :</td>
       <td><select name="tpl">
+        <!--
         <option value="demo_oo_text.odt">OpenOffice Writer Document (.odt)</option>
         <option value="demo_oo_spreadsheet.ods">OpenOffice Calc Spreadsheet (.ods)</option>
         <option value="demo_oo_presentation.odp">OpenOffice Impress Presentation (.odp)</option>
+        -->
+        <option value="demo1.docx">Demo1(.docx)</option>
+        <option value="demo2.docx">Demo2(.docx)</option>
+        <option value="demo3.docx">Demo3(.docx)</option>
         <option value="demo_oo_graph.odg">OpenOffice Draw Graphic (.odg)</option>
         <option value="demo_oo_formula.odf">OpenOffice Math Formula (.odf)</option>
         <option value="demo_ms_word.docx">Ms Word Document (.docx)</option>
@@ -140,6 +143,7 @@
       </select></td>
     </tr>
     <tr>
+    <!--
       <td>Debug :</td>
       <td><select name="debug">
         <option value="" selected="selected">No</option>
@@ -152,18 +156,24 @@
       <td>Save locally with suffix :</td>
       <td><input name="save_as" type="text" size="10" /> <i>(leave empty for direct download)</i></td>
     </tr>
+    -->
     <tr>
       <td>&nbsp;</td>
       <td>
         <input type="submit" name="btn_result" value="Merge" />
+        <!--        
         <input type="submit" name="btn_template" value="See template" />
-        <input type="submit" name="btn_script" value="See PHP script" />
+        <input type="submit" name="btn_script" value="See PHP script" /> 
+        -->
       </td>
     </tr>
   </table>
 </form>
 
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script><script type="text/javascript">_uacct = "UA-157533-3"; urchinTracker(); </script>
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">_uacct = "UA-157533-3"; urchinTracker(); </script>
 
 </body>
 <script type="text/javascript">
