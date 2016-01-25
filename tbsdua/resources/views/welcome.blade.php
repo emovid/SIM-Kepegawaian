@@ -24,7 +24,7 @@
       <label class="control-label" for="lunch">Jenis Surat:</label>
     <div class="form-group">
       <select id="lunch" name="tpl" class="selectpicker" data-live-search="true" title="Pilih Jenis Surat" >
-       <option value="demo1.docx">Cuti Besar</option>
+       <option value="cuti_besar.docx">Cuti Besar</option>
         <option value="demo2.docx">Cuti Haji Umroh</option>
         <option value="demo3.docx">Cuti Tahunan Penting</option>
         <option value="demo_ms_word.docx">Ijin Belajar</option>

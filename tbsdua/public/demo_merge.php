@@ -37,14 +37,32 @@ $NIP = (isset($_POST['NIP'])) ? $_POST['NIP'] : '';
 $NIP = trim(''.$NIP);
 if ($NIP=='') $NIP = "(no name)";
 
-$sql = "SELECT nama FROM tabeltbs where id = '$NIP'";
-
+$sql = "SELECT * FROM employees where nip = '$NIP'";
 $result = $conn->query($sql);
 
 $row = $result->fetch_assoc();
 
 
 $nama = $row["nama"];
+$no_karpeg = $row["no_karpeg"];
+$jenis_kelamin = $row["jenis_kelamin"];
+$agama = $row["agama"];
+$tempat_lahir = $row["tempat_lahir"];
+$tanggal_lahir = $row["tanggal_lahir"];
+$tmt_cpns = $row["tmt_cpns"];
+$tmt_pns = $row["tmt_pns"];
+$tmt_pangkat_terakhir = $row["tmt_pangkat_terakhir"];
+$golongan = $row["golongan"];
+$jabatan = $row["jabatan"];
+$unit_kerja = $row["unit_kerja"];
+$instansi = $row["instansi"];
+$pendidikan_terakhir = $row["pendidikan_terakhir"];
+$pendidikan_tahun_lulus = $row["pendidikan_tahun_lulus"];
+$pendidikan_univ = $row["pendidikan_univ"];
+$pendidikan_tempat = $row["pendidikan_tempat"];
+$pendidikan_jurusan = $row["pendidikan_jurusan"];
+$status = $row["status"];
+
 /*
 // A recordset for merging tables
 $data = array();
@@ -64,7 +82,7 @@ $x_delete = 1;
 // Load the template
 // -----------------
 
-$template = 'demo_ms_word.docx';
+$template = (isset($_POST['tpl'])) ? $_POST['tpl'] : '';
 $TBS->LoadTemplate($template, OPENTBS_ALREADY_UTF8); // Also merge some [onload] automatic fields (depends of the type of document).
 
 /*
