@@ -42,6 +42,10 @@ if (${'NIP'.$j}=='') ${'NIP'.$j} = "(no name)";
 
 $data=array();
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 for($i=1; $i<=10; $i++){
 
 $NIP = ${'NIP'.$i}; 
