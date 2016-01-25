@@ -33,36 +33,45 @@ if ($conn->connect_error) {
 
 
 // Retrieve the user name to display
-$NIP = (isset($_POST['NIP'])) ? $_POST['NIP'] : '';
-$NIP = trim(''.$NIP);
-if ($NIP=='') $NIP = "(no name)";
 
+for($j=1; $j<=2; $j++){
+${'NIP'.$j} = (isset($_POST['NIP'.$j])) ? $_POST['NIP'.$j] : '';
+${'NIP'.$j} = trim(''.${'NIP'.$j});
+if (${'NIP'.$j}=='') ${'NIP'.$j} = "(no name)";
+}
+
+
+
+for($i=1; $i<=2; $i++){
+
+$NIP = ${'NIP'.$i}; 
 $sql = "SELECT * FROM employees where nip = '$NIP'";
 $result = $conn->query($sql);
 
+
 $row = $result->fetch_assoc();
 
+${'nama'.$i} = $row["nama"];
+${'no_karpeg'.$i} = $row["no_karpeg"];
+${'jenis_kelamin'.$i} = $row["jenis_kelamin"];
+${'agama'.$i} = $row["agama"];
+${'tempat_lahir'.$i} = $row["tempat_lahir"];
+${'tanggal_lahir'.$i} = $row["tanggal_lahir"];
+${'tmt_cpns'.$i} = $row["tmt_cpns"];
+${'tmt_pns'.$i} = $row["tmt_pns"];
+${'tmt_pangkat_terakhir'.$i} = $row["tmt_pangkat_terakhir"];
+${'golongan'.$i} = $row["golongan"];
+${'jabatan'.$i} = $row["jabatan"];
+${'unit_kerja'.$i} = $row["unit_kerja"];
+${'instansi'.$i} = $row["instansi"];
+${'pendidikan_terakhir'.$i} = $row["pendidikan_terakhir"];
+${'pendidikan_tahun_lulus'.$i} = $row["pendidikan_tahun_lulus"];
+${'pendidikan_univ'.$i} = $row["pendidikan_univ"];
+${'pendidikan_tempat'.$i} = $row["pendidikan_tempat"];
+${'pendidikan_jurusan'.$i} = $row["pendidikan_jurusan"];
+${'status'.$i} = $row["status"];
 
-$nama = $row["nama"];
-$no_karpeg = $row["no_karpeg"];
-$jenis_kelamin = $row["jenis_kelamin"];
-$agama = $row["agama"];
-$tempat_lahir = $row["tempat_lahir"];
-$tanggal_lahir = $row["tanggal_lahir"];
-$tmt_cpns = $row["tmt_cpns"];
-$tmt_pns = $row["tmt_pns"];
-$tmt_pangkat_terakhir = $row["tmt_pangkat_terakhir"];
-$golongan = $row["golongan"];
-$jabatan = $row["jabatan"];
-$unit_kerja = $row["unit_kerja"];
-$instansi = $row["instansi"];
-$pendidikan_terakhir = $row["pendidikan_terakhir"];
-$pendidikan_tahun_lulus = $row["pendidikan_tahun_lulus"];
-$pendidikan_univ = $row["pendidikan_univ"];
-$pendidikan_tempat = $row["pendidikan_tempat"];
-$pendidikan_jurusan = $row["pendidikan_jurusan"];
-$status = $row["status"];
-
+}
 /*
 // A recordset for merging tables
 $data = array();
