@@ -8,11 +8,25 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" href="dist/css/bootstrap-select.css">
 
+  <script>
+$('#surat').on('change',function(){
+     var selection = $(this).val();
+    switch(selection){
+    case "4":
+    $("#NIP2").show()
+   break;
+    default:
+    $("#NIP2").hide()
+    }
+});
+</script>
+
   <style>
     body {
       padding-top: 70px;
     }
   </style>
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -21,13 +35,13 @@
 <body>
 
  <form role="form" id="form1" method="post" action="demo_merge.php" class="col-md-4 well">
-      <label class="control-label" for="lunch">Jenis Surat:</label>
+      <label class="control-label" for="surat">Jenis Surat:</label>
     <div class="form-group">
-      <select id="lunch" name="tpl" class="selectpicker" data-live-search="true" title="Pilih Jenis Surat" >
+      <select id="surat" name="tpl" class="selectpicker" data-live-search="true" title="Pilih Jenis Surat" >
        <option value="cuti_besar.docx">Cuti Besar</option>
         <option value="demo2.docx">Cuti Haji Umroh</option>
         <option value="demo3.docx">Cuti Tahunan Penting</option>
-        <option value="demo_ms_word.docx">Ijin Belajar</option>
+        <option value="4">Ijin Belajar</option>
         <option value="5">Ijin Cuti Bersalin Naban</option>
         <option value="6">Ijin Cuti Bersalin</option>
         <option value="7">Ijin Cuti Sakit Walikota</option>
@@ -58,8 +72,63 @@
  <label class="control-label" for="NIP">Masukkan NIP:</label>
       <input name="NIP" id="NIP" type="text" class="form-control"/>
 </div>
+<div class="form-group" id="grpnip2">
+ <label class="control-label" for="NIP2">Masukkan NIP:</label>
+      <input name="NIP2" id="NIP2" type="text" class="form-control"/>
+</div>
+<div class="form-group" id="grpnip3">
+ <label class="control-label" for="NIP2">Masukkan NIP:</label>
+      <input name="NIP2" id="NIP2" type="text" class="form-control"/>
+</div>
+<div class="form-group" id="grpnip4">
+ <label class="control-label" for="NIP2">Masukkan NIP:</label>
+      <input name="NIP2" id="NIP2" type="text" class="form-control"/>
+</div>
+<div class="form-group" id="grpnip5">
+ <label class="control-label" for="NIP2">Masukkan NIP:</label>
+      <input name="NIP2" id="NIP2" type="text" class="form-control"/>
+</div>
+<div class="form-group" id="grpnip6">
+ <label class="control-label" for="NIP2">Masukkan NIP:</label>
+      <input name="NIP2" id="NIP2" type="text" class="form-control"/>
+</div>
+<div class="form-group" id="grpnip7">
+ <label class="control-label" for="NIP2">Masukkan NIP:</label>
+      <input name="NIP2" id="NIP2" type="text" class="form-control"/>
+</div>
+<div class="form-group" id="grpnip8">
+ <label class="control-label" for="NIP2">Masukkan NIP:</label>
+      <input name="NIP2" id="NIP2" type="text" class="form-control"/>
+</div>
+<div class="form-group" id="grpnip9">
+ <label class="control-label" for="NIP2">Masukkan NIP:</label>
+      <input name="NIP2" id="NIP2" type="text" class="form-control"/>
+</div>
+<div class="form-group" id="grpnip10">
+ <label class="control-label" for="NIP2">Masukkan NIP:</label>
+      <input name="NIP2" id="NIP2" type="text" class="form-control"/>
+</div>
+
+<script>
+        
+for( i=2; i<=10; i++ ){
+        $('#grpnip'+ i).hide();
+}
+        $('#surat').on('change', function() {
+    if($(this).val() == "4") {
+       for( i=2; i<=10; i++ ){
+        $('#grpnip'+ i).show();
+}
 
 
+    } 
+    else{
+      for( i=2; i<=10; i++ ){
+        $('#grpnip'+ i).hide();
+}
+    }
+});
+    </script>
 
 
       <td>&nbsp;</td>
@@ -79,26 +148,6 @@
 
   
 
-<script>
-  $(document).ready(function () {
-    var mySelect = $('#first-disabled2');
-
-    $('#special').on('click', function () {
-      mySelect.find('option:selected').prop('disabled', true);
-      mySelect.selectpicker('refresh');
-    });
-
-    $('#special2').on('click', function () {
-      mySelect.find('option:disabled').prop('disabled', false);
-      mySelect.selectpicker('refresh');
-    });
-
-    $('#basic2').selectpicker({
-      liveSearch: true,
-      maxOptions: 1
-    });
-  });
-</script>
 </body>
 
 <script type="text/javascript">
