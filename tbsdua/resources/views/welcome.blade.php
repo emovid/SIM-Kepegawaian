@@ -43,7 +43,7 @@ $('#surat').on('change',function(){
         <option value="cuti_umroh.docx">Cuti Umroh</option>
         <option value="demo3.docx">Cuti Tahunan Penting</option>
         <option value="4">Ijin Belajar</option>
-        <option value="5">Ijin Cuti Bersalin Naban</option>
+        <option value="demo1.docx">Ijin Cuti Bersalin Naban</option>
         <option value="6">Ijin Cuti Bersalin</option>
         <option value="7">Ijin Cuti Sakit Walikota</option>
         <option value="8">Ijin Cuti Sakit</option>
@@ -117,7 +117,7 @@ for( i=2; i<=10; i++ ){
         $('#grpnip'+ i).hide();
 }
         $('#surat').on('change', function() {
-    if($(this).val() == "demo3.docx") {
+    if($(this).val() == "demo3.docx" || $(this).val() == "demo1.docx" ) {
        for( i=2; i<=10; i++ ){
         $('#grpnip'+ i).show();
 }

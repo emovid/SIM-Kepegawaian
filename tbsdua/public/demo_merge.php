@@ -82,7 +82,7 @@ switch ($bulan) {
 for($j=1; $j<=10; $j++){
 ${'NIP'.$j} = (isset($_POST['NIP'.$j])) ? $_POST['NIP'.$j] : '';
 ${'NIP'.$j} = trim(''.${'NIP'.$j});
-if (${'NIP'.$j}=='') ${'NIP'.$j} = "(no name)";
+//if (${'NIP'.$j}=='') ${'NIP'.$j} = "(no name)";
 }
 
 $data=array();
@@ -91,11 +91,14 @@ $data=array();
 for($i=1; $i<=10; $i++){
 
 $NIP = ${'NIP'.$i}; 
+
+if($NIP!=''){
 $sql = "SELECT * FROM employees where nip = '$NIP'";
 $result = $conn->query($sql);
 
 
 $row = $result->fetch_assoc();
+
 
 ${'nama'.$i} = $row["nama"];
 ${'no_karpeg'.$i} = $row["no_karpeg"];
@@ -138,7 +141,13 @@ $data[]=array(
     'pendidikan_tempat' => ${'pendidikan_tempat'.$i},
     'pendidikan_jurusan' => ${'pendidikan_jurusan'.$i},
     'status' => ${'status'.$i});
-    
+
+}
+
+else{
+    $i=11;
+}    
+
 }
 
 /*
