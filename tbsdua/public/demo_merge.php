@@ -34,7 +34,7 @@ if ($conn->connect_error) {
 
 // Retrieve the user name to display
 
-for($j=1; $j<=2; $j++){
+for($j=1; $j<=10; $j++){
 ${'NIP'.$j} = (isset($_POST['NIP'.$j])) ? $_POST['NIP'.$j] : '';
 ${'NIP'.$j} = trim(''.${'NIP'.$j});
 if (${'NIP'.$j}=='') ${'NIP'.$j} = "(no name)";
@@ -42,7 +42,7 @@ if (${'NIP'.$j}=='') ${'NIP'.$j} = "(no name)";
 
 
 
-for($i=1; $i<=2; $i++){
+for($i=1; $i<=10; $i++){
 
 $NIP = ${'NIP'.$i}; 
 $sql = "SELECT * FROM employees where nip = '$NIP'";
