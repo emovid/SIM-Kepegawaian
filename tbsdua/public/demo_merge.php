@@ -34,6 +34,51 @@ if ($conn->connect_error) {
 
 // Retrieve the user name to display
 
+$hari = date('d');
+$bulan = date('m');
+$tahun = date('y');
+
+switch ($bulan) {
+    case "01":
+        $tanggal= $hari." Januari 20".$tahun;
+        break;
+    case "02":
+        $tanggal=$hari." Februari 20".$tahun;
+        break;
+    case "03":
+        $tanggal=$hari." Maret 20".$tahun;
+        break;
+     case "04":
+        $tanggal=$hari." April 20".$tahun;
+        break;
+    case "05":
+        $tanggal=$hari." Mei 20".$tahun;
+        break;
+    case "06":
+        $tanggal=$hari." Juni 20".$tahun;
+        break;
+    case "07":
+        $tanggal=$hari." Juli 20".$tahun;
+        break;
+    case "08":
+        $tanggal=$hari." Agustus 20".$tahun;
+        break;
+    case "09":
+        $tanggal=$hari." September 20".$tahun;
+        break;
+    case "10":
+        $tanggal=$hari." Oktober 20".$tahun;
+        break;
+    case "11":
+        $tanggal=$hari." November 20".$tahun;
+        break;
+    case "12":
+        $tanggal=$hari." Desember 20".$tahun;
+        break;
+    default:
+        $tanggal=$hari."Bulan".$tahun;;
+}
+
 for($j=1; $j<=10; $j++){
 ${'NIP'.$j} = (isset($_POST['NIP'.$j])) ? $_POST['NIP'.$j] : '';
 ${'NIP'.$j} = trim(''.${'NIP'.$j});
@@ -42,10 +87,7 @@ if (${'NIP'.$j}=='') ${'NIP'.$j} = "(no name)";
 
 $data=array();
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 for($i=1; $i<=10; $i++){
 
 $NIP = ${'NIP'.$i}; 
