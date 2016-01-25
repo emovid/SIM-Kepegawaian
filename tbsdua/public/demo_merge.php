@@ -34,15 +34,15 @@ if ($conn->connect_error) {
 
 // Retrieve the user name to display
 
-for($j=1; $j<=2; $j++){
+for($j=1; $j<=10; $j++){
 ${'NIP'.$j} = (isset($_POST['NIP'.$j])) ? $_POST['NIP'.$j] : '';
 ${'NIP'.$j} = trim(''.${'NIP'.$j});
 if (${'NIP'.$j}=='') ${'NIP'.$j} = "(no name)";
 }
 
+$data=array();
 
-
-for($i=1; $i<=2; $i++){
+for($i=1; $i<=10; $i++){
 
 $NIP = ${'NIP'.$i}; 
 $sql = "SELECT * FROM employees where nip = '$NIP'";
@@ -71,7 +71,30 @@ ${'pendidikan_tempat'.$i} = $row["pendidikan_tempat"];
 ${'pendidikan_jurusan'.$i} = $row["pendidikan_jurusan"];
 ${'status'.$i} = $row["status"];
 
+$data[]=array(
+    'nip' => ${'NIP'.$i},
+    'nama' => ${'nama'.$i},
+    'no_karpeg' => ${'no_karpeg'.$i},
+    'jenis_kelamin' => ${'jenis_kelamin'.$i},
+    'agama' => ${'agama'.$i},
+    'tempat_lahir' => ${'tempat_lahir'.$i},
+    'tanggal_lahir' => ${'tanggal_lahir'.$i},
+    'tmt_cpns' => ${'tmt_cpns'.$i},
+    'tmt_pns' => ${'tmt_pns'.$i},
+    'tmt_pangkat_terakhir' => ${'tmt_pangkat_terakhir'.$i},
+    'golongan' => ${'golongan'.$i},
+    'jabatan' => ${'jabatan'.$i},
+    'unit_kerja' => ${'unit_kerja'.$i},
+    'instansi' => ${'instansi'.$i},
+    'pendidikan_terakhir' => ${'pendidikan_terakhir'.$i},
+    'pendidikan_tahun_lulus' => ${'pendidikan_tahun_lulus'.$i},
+    'pendidikan_univ' => ${'pendidikan_univ'.$i},
+    'pendidikan_tempat' => ${'pendidikan_tempat'.$i},
+    'pendidikan_jurusan' => ${'pendidikan_jurusan'.$i},
+    'status' => ${'status'.$i});
+    
 }
+
 /*
 // A recordset for merging tables
 $data = array();
@@ -93,7 +116,7 @@ $x_delete = 1;
 
 $template = (isset($_POST['tpl'])) ? $_POST['tpl'] : '';
 $TBS->LoadTemplate($template, OPENTBS_ALREADY_UTF8); // Also merge some [onload] automatic fields (depends of the type of document).
-
+$TBS->MergeBlock('a', $data);
 /*
 // ----------------------
 // Debug mode of the demo

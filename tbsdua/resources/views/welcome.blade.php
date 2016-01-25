@@ -39,7 +39,8 @@ $('#surat').on('change',function(){
     <div class="form-group">
       <select id="surat" name="tpl" class="selectpicker" data-live-search="true" title="Pilih Jenis Surat" >
        <option value="cuti_besar.docx">Cuti Besar</option>
-        <option value="demo2.docx">Cuti Haji Umroh</option>
+        <option value="demo2.docx">Cuti Haji</option>
+        <option value="cuti_umroh.docx">Cuti Umroh</option>
         <option value="demo3.docx">Cuti Tahunan Penting</option>
         <option value="4">Ijin Belajar</option>
         <option value="5">Ijin Cuti Bersalin Naban</option>
