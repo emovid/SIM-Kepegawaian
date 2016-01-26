@@ -44,19 +44,17 @@ $('#surat').on('change',function(){
         <option value="cuti_alasan_penting.docx">Cuti Alasan Penting</option>
         <option value="cuti_tahunan.docx">Cuti Tahunan</option>
         <option value="ijin_belajar.docx">Ijin Belajar</option>
-        <option value="demo1.docx">Ijin Cuti Bersalin Naban</option>
-        <option value="6">Ijin Cuti Bersalin</option>
+        <option value="ijin_cuti_bersalin_naban.docx">Ijin Cuti Bersalin Naban</option>
+        <option value="ijin_cuti_bersalin.docx">Ijin Cuti Bersalin</option>
         <option value="7">Ijin Cuti Sakit Walikota</option>
-        <option value="8">Ijin Cuti Sakit</option>
+        <option value="ijin_cuti_sakit.docx">Ijin Cuti Sakit</option>
         <option value="9">Keuangan Bulanan</option>
         <option value="10">Koperasi Lina</option>
-        <option value="11">Pengajuan Taspen</option>
-        <option value="12">Pensiun Janda</option>
-        <option value="13">Pensiun, Sakit, Walikota</option>
-        <option value="14">Permohonan Ijin Belajar</option>
-        <option value="15">Permohonan Pensiun</option>
-        <option value="16">PLT(Penunjukkan)</option>
-        <option value="17">Rekomendasi KA Dinas</option>
+        <option value="pengajuan_taspen.docx">Pengajuan Taspen</option>
+        <option value="pensiun_janda.docx">Pensiun Janda</option>
+        <option value="permohonan_pensiun.docx">Permohonan Pensiun</option>
+        <option value="plt(penunjukkan).docx">PLT(Penunjukkan)</option>
+        <option value="rekomendasi.docx">Rekomendasi KA Dinas</option>
         <option value="18">Seleksi Masuk Perguruan Tinggi</option>
         <option value="19">SPMJ(Surat Pernyataan Telah Menduduki Jabatan</option>
         <option value="20">SPMT(Surat Pernyataan Melakukan Tugas</option>
@@ -139,9 +137,10 @@ for(i=2; i<=10; i++){
         $('#grpnip'+i).hide();
       }
 
+
         $('#grpid').hide();
         $('#surat').on('change', function() {
-    if($(this).val() == "demo3.docx" || $(this).val() == "demo1.docx" ) {
+    if($(this).val() == "ijin_belajar.docx" || $(this).val() == "cuti_besar.docx" || $(this).val() == "pengajuan_taspen.docx" || $(this).val() == "permohonan_pensiun.docx") {
         $('#grpid').show();
     } 
 

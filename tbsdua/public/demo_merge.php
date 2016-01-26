@@ -143,6 +143,9 @@ for($i=1; $i<=10; $i++){
 $data=array();
 $jml_id = (isset($_POST['jml_id'])) ? $_POST['jml_id'] : '';
 
+if($jml_id==''){
+    $jml_id=1;
+}
 
 for($i=1; $i<=$jml_id; $i++){
 
@@ -174,19 +177,19 @@ for($i=1; $i<=$jml_id; $i++){
     if(${'tempat_lahir'.$i}==""){
         ${'tempat_lahir'.$i}="-";
     }
-    ${'tanggal_lahir'.$i} = $row["tanggal_lahir"];
+    ${'tanggal_lahir'.$i} = substr($row["tanggal_lahir"], 0,11);
         if(${'tanggal_lahir'.$i}==""){
         ${'tanggal_lahir'.$i}="-";
     }
-    ${'tmt_cpns'.$i} = $row["tmt_cpns"];
+    ${'tmt_cpns'.$i} = substr($row["tmt_cpns"],0,11);
     if(${'tmt_cpns'.$i}==""){
         ${'tmt_cpns'.$i}="-";
     }
-    ${'tmt_pns'.$i} = $row["tmt_pns"];
+    ${'tmt_pns'.$i} = substr($row["tmt_cpns"],0,11);
     if(${'tmt_pns'.$i}==""){
         ${'tmt_pns'.$i}="-";
     }
-    ${'tmt_pangkat_terakhir'.$i} = $row["tmt_pangkat_terakhir"];
+    ${'tmt_pangkat_terakhir'.$i} = substr($row["tmt_cpns"],0,11);
     if(${'tmt_pangkat_terakhir'.$i}==""){
         ${'tmt_pangkat_terakhir'.$i}="-";
     }
