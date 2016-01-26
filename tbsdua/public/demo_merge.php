@@ -90,25 +90,25 @@ $jml_id = (isset($_POST['jml_id'])) ? $_POST['jml_id'] : '';
 
 
 for($i=1; $i<=10; $i++){
-    ${'nama'.$i} = '';
-    ${'no_karpeg'.$i} = '';
-    ${'jenis_kelamin'.$i} = '';
-    ${'agama'.$i} = '';
-    ${'tempat_lahir'.$i} = '';
-    ${'tanggal_lahir'.$i} = '';
-    ${'tmt_cpns'.$i} = '';
-    ${'tmt_pns'.$i} = '';
-    ${'tmt_pangkat_terakhir'.$i} = '';
-    ${'golongan'.$i} = '';
-    ${'jabatan'.$i} = '';
-    ${'unit_kerja'.$i} = '';
-    ${'instansi'.$i} = '';
-    ${'pendidikan_terakhir'.$i} = '';
-    ${'pendidikan_tahun_lulus'.$i} = '';
-    ${'pendidikan_univ'.$i} = '';
-    ${'pendidikan_tempat'.$i} = '';
-    ${'pendidikan_jurusan'.$i} = '';
-    ${'status'.$i} = '';
+    ${'nama'.$i} = "";
+    ${'no_karpeg'.$i} = "";
+    ${'jenis_kelamin'.$i} = "";
+    ${'agama'.$i} = "";
+    ${'tempat_lahir'.$i} = "";
+    ${'tanggal_lahir'.$i} = "";
+    ${'tmt_cpns'.$i} = "";
+    ${'tmt_pns'.$i} = "";
+    ${'tmt_pangkat_terakhir'.$i} = "";
+    ${'golongan'.$i} = "";
+    ${'jabatan'.$i} = "";
+    ${'unit_kerja'.$i} = "";
+    ${'instansi'.$i} = "";
+    ${'pendidikan_terakhir'.$i} = "";
+    ${'pendidikan_tahun_lulus'.$i} = "";
+    ${'pendidikan_univ'.$i} = "";
+    ${'pendidikan_tempat'.$i} = "";
+    ${'pendidikan_jurusan'.$i} = "";
+    ${'status'.$i} = "";
 }
 
 for($i=1; $i<=$jml_id; $i++){
@@ -119,6 +119,7 @@ for($i=1; $i<=$jml_id; $i++){
     $result = $conn->query($sql);
 
     $row = $result->fetch_assoc();
+
 
     ${'nama'.$i} = $row["nama"];
     ${'no_karpeg'.$i} = $row["no_karpeg"];
@@ -161,6 +162,9 @@ for($i=1; $i<=$jml_id; $i++){
         'pendidikan_tempat' => ${'pendidikan_tempat'.$i},
         'pendidikan_jurusan' => ${'pendidikan_jurusan'.$i},
         'status' => ${'status'.$i});
+
+
+
 }
 
 /*
