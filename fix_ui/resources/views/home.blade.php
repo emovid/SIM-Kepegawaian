@@ -12,6 +12,15 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
+                  <ul class="nav nav-tabs">
+                    <li class="active">
+                      <a href="{{ url('/home') }}">Buat</a>
+                    </li>
+                    <li>
+                      <a href="{{ url('/edit') }}">Edit Data</a>
+                    </li>
+                  </ul>
+                  <br>
                     
                      <form role="form" id="form1" method="post" action="demo_merge.php" class="col-md-5 well">
                       <label class="control-label" for="lunch">Jenis Surat:</label>
@@ -69,10 +78,13 @@
                     <div class="col-xs-7">
                         <h4>Keterangan</h4>
                         <ol>
-                            <li>Pilih jenis surat yang akan dibuat</li>
-                            <li>Pilih jenis surat yang akan dibuat</li>
+                          <li>Pilih jenis surat yang akan dibuat</li>
+                          <li>Masukkan Nomor Surat</li>
+                          <li>Masukkan NIP</li>
+                          <li>Masukkan data lain yang diperlukan</li>
+                          <li>Klik Merge</li>
                         </ol>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>                            
+                        <p>Setelah Anda memilih Merge maka file akan otomatis terunduh melalui browser yang Anda gunakan saat ini.</p>                            
                         
                     </div>
                 </div>
