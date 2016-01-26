@@ -41,8 +41,9 @@ $('#surat').on('change',function(){
        <option value="cuti_besar.docx">Cuti Besar</option>
         <option value="demo2.docx">Cuti Haji</option>
         <option value="cuti_umroh.docx">Cuti Umroh</option>
-        <option value="demo3.docx">Cuti Tahunan Penting</option>
-        <option value="4">Ijin Belajar</option>
+        <option value="cuti_alasan_penting.docx">Cuti Alasan Penting</option>
+        <option value="cuti_tahunan.docx">Cuti Tahunan</option>
+        <option value="ijin_belajar.docx">Ijin Belajar</option>
         <option value="demo1.docx">Ijin Cuti Bersalin Naban</option>
         <option value="6">Ijin Cuti Bersalin</option>
         <option value="7">Ijin Cuti Sakit Walikota</option>

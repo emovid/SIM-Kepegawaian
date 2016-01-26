@@ -104,6 +104,7 @@ for($i=1; $i<=10; $i++){
     ${'tmt_cpns'.$i} = "";
     ${'tmt_pns'.$i} = "";
     ${'tmt_pangkat_terakhir'.$i} = "";
+    ${'pangkat'.$i} = "";
     ${'golongan'.$i} = "";
     ${'jabatan'.$i} = "";
     ${'unit_kerja'.$i} = "";
@@ -189,6 +190,10 @@ for($i=1; $i<=$jml_id; $i++){
     if(${'tmt_pangkat_terakhir'.$i}==""){
         ${'tmt_pangkat_terakhir'.$i}="-";
     }
+    ${'pangkat'.$i} = $row["pangkat"];
+        if(${'pangkat'.$i}==""){
+        ${'pangkat'.$i}="-";
+    }
     ${'golongan'.$i} = $row["golongan"];
         if(${'golongan'.$i}==""){
         ${'golongan'.$i}="-";
@@ -262,6 +267,7 @@ for($i=1; $i<=$jml_id; $i++){
         'tmt_cpns' => ${'tmt_cpns'.$i},
         'tmt_pns' => ${'tmt_pns'.$i},
         'tmt_pangkat_terakhir' => ${'tmt_pangkat_terakhir'.$i},
+        'pangkat' => ${'pangkat'.$i},
         'golongan' => ${'golongan'.$i},
         'jabatan' => ${'jabatan'.$i},
         'unit_kerja' => ${'unit_kerja'.$i},
