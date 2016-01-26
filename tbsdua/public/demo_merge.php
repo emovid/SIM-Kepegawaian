@@ -34,124 +34,133 @@ if ($conn->connect_error) {
 
 // Retrieve the user name to display
 
-$hari = date('d');
+$hari = date('j');
 $bulan = date('m');
-$tahun = date('y');
+$tahun = date('Y');
 
 switch ($bulan) {
     case "01":
-        $tanggal= $hari." Januari 20".$tahun;
+        $tanggal= $hari." Januari ".$tahun;
         break;
     case "02":
-        $tanggal=$hari." Februari 20".$tahun;
+        $tanggal=$hari." Februari ".$tahun;
         break;
     case "03":
-        $tanggal=$hari." Maret 20".$tahun;
+        $tanggal=$hari." Maret ".$tahun;
         break;
      case "04":
-        $tanggal=$hari." April 20".$tahun;
+        $tanggal=$hari." April ".$tahun;
         break;
     case "05":
-        $tanggal=$hari." Mei 20".$tahun;
+        $tanggal=$hari." Mei ".$tahun;
         break;
     case "06":
-        $tanggal=$hari." Juni 20".$tahun;
+        $tanggal=$hari." Juni ".$tahun;
         break;
     case "07":
-        $tanggal=$hari." Juli 20".$tahun;
+        $tanggal=$hari." Juli ".$tahun;
         break;
     case "08":
-        $tanggal=$hari." Agustus 20".$tahun;
+        $tanggal=$hari." Agustus ".$tahun;
         break;
     case "09":
-        $tanggal=$hari." September 20".$tahun;
+        $tanggal=$hari." September ".$tahun;
         break;
     case "10":
-        $tanggal=$hari." Oktober 20".$tahun;
+        $tanggal=$hari." Oktober ".$tahun;
         break;
     case "11":
-        $tanggal=$hari." November 20".$tahun;
+        $tanggal=$hari." November ".$tahun;
         break;
     case "12":
-        $tanggal=$hari." Desember 20".$tahun;
+        $tanggal=$hari." Desember ".$tahun;
         break;
     default:
         $tanggal=$hari."Bulan".$tahun;;
 }
 
-$nomor_surat = (isset($_POST['nomor_surat'])) ? $_POST['nomor_surat'] : '';
-$nomor_surat = trim(''.$nomor_surat);
-
-
 for($j=1; $j<=10; $j++){
-${'NIP'.$j} = (isset($_POST['NIP'.$j])) ? $_POST['NIP'.$j] : '';
-${'NIP'.$j} = trim(''.${'NIP'.$j});
-//if (${'NIP'.$j}=='') ${'NIP'.$j} = "(no name)";
+    ${'NIP'.$j} = (isset($_POST['NIP'.$j])) ? $_POST['NIP'.$j] : '';
+    ${'NIP'.$j} = trim(''.${'NIP'.$j});
+    //if (${'NIP'.$j}=='') ${'NIP'.$j} = "(no name)";
 }
 
 $data=array();
+$jml_id = (isset($_POST['jml_id'])) ? $_POST['jml_id'] : '';
 
 
 for($i=1; $i<=10; $i++){
-
-$NIP = ${'NIP'.$i}; 
-
-if($NIP!=''){
-$sql = "SELECT * FROM employees where nip = '$NIP'";
-$result = $conn->query($sql);
-
-
-$row = $result->fetch_assoc();
-
-
-${'nama'.$i} = $row["nama"];
-${'no_karpeg'.$i} = $row["no_karpeg"];
-${'jenis_kelamin'.$i} = $row["jenis_kelamin"];
-${'agama'.$i} = $row["agama"];
-${'tempat_lahir'.$i} = $row["tempat_lahir"];
-${'tanggal_lahir'.$i} = $row["tanggal_lahir"];
-${'tmt_cpns'.$i} = $row["tmt_cpns"];
-${'tmt_pns'.$i} = $row["tmt_pns"];
-${'tmt_pangkat_terakhir'.$i} = $row["tmt_pangkat_terakhir"];
-${'golongan'.$i} = $row["golongan"];
-${'jabatan'.$i} = $row["jabatan"];
-${'unit_kerja'.$i} = $row["unit_kerja"];
-${'instansi'.$i} = $row["instansi"];
-${'pendidikan_terakhir'.$i} = $row["pendidikan_terakhir"];
-${'pendidikan_tahun_lulus'.$i} = $row["pendidikan_tahun_lulus"];
-${'pendidikan_univ'.$i} = $row["pendidikan_univ"];
-${'pendidikan_tempat'.$i} = $row["pendidikan_tempat"];
-${'pendidikan_jurusan'.$i} = $row["pendidikan_jurusan"];
-${'status'.$i} = $row["status"];
-
-$data[]=array(
-    'nip' => ${'NIP'.$i},
-    'nama' => ${'nama'.$i},
-    'no_karpeg' => ${'no_karpeg'.$i},
-    'jenis_kelamin' => ${'jenis_kelamin'.$i},
-    'agama' => ${'agama'.$i},
-    'tempat_lahir' => ${'tempat_lahir'.$i},
-    'tanggal_lahir' => ${'tanggal_lahir'.$i},
-    'tmt_cpns' => ${'tmt_cpns'.$i},
-    'tmt_pns' => ${'tmt_pns'.$i},
-    'tmt_pangkat_terakhir' => ${'tmt_pangkat_terakhir'.$i},
-    'golongan' => ${'golongan'.$i},
-    'jabatan' => ${'jabatan'.$i},
-    'unit_kerja' => ${'unit_kerja'.$i},
-    'instansi' => ${'instansi'.$i},
-    'pendidikan_terakhir' => ${'pendidikan_terakhir'.$i},
-    'pendidikan_tahun_lulus' => ${'pendidikan_tahun_lulus'.$i},
-    'pendidikan_univ' => ${'pendidikan_univ'.$i},
-    'pendidikan_tempat' => ${'pendidikan_tempat'.$i},
-    'pendidikan_jurusan' => ${'pendidikan_jurusan'.$i},
-    'status' => ${'status'.$i});
-
+    ${'nama'.$i} = '';
+    ${'no_karpeg'.$i} = '';
+    ${'jenis_kelamin'.$i} = '';
+    ${'agama'.$i} = '';
+    ${'tempat_lahir'.$i} = '';
+    ${'tanggal_lahir'.$i} = '';
+    ${'tmt_cpns'.$i} = '';
+    ${'tmt_pns'.$i} = '';
+    ${'tmt_pangkat_terakhir'.$i} = '';
+    ${'golongan'.$i} = '';
+    ${'jabatan'.$i} = '';
+    ${'unit_kerja'.$i} = '';
+    ${'instansi'.$i} = '';
+    ${'pendidikan_terakhir'.$i} = '';
+    ${'pendidikan_tahun_lulus'.$i} = '';
+    ${'pendidikan_univ'.$i} = '';
+    ${'pendidikan_tempat'.$i} = '';
+    ${'pendidikan_jurusan'.$i} = '';
+    ${'status'.$i} = '';
 }
 
-else{
-    $i=11;
-}    
+for($i=1; $i<=$jml_id; $i++){
 
+    $NIP = ${'NIP'.$i}; 
+
+    $sql = "SELECT * FROM employees where nip = '$NIP'";
+    $result = $conn->query($sql);
+
+    $row = $result->fetch_assoc();
+
+    ${'nama'.$i} = $row["nama"];
+    ${'no_karpeg'.$i} = $row["no_karpeg"];
+    ${'jenis_kelamin'.$i} = $row["jenis_kelamin"];
+    ${'agama'.$i} = $row["agama"];
+    ${'tempat_lahir'.$i} = $row["tempat_lahir"];
+    ${'tanggal_lahir'.$i} = $row["tanggal_lahir"];
+    ${'tmt_cpns'.$i} = $row["tmt_cpns"];
+    ${'tmt_pns'.$i} = $row["tmt_pns"];
+    ${'tmt_pangkat_terakhir'.$i} = $row["tmt_pangkat_terakhir"];
+    ${'golongan'.$i} = $row["golongan"];
+    ${'jabatan'.$i} = $row["jabatan"];
+    ${'unit_kerja'.$i} = $row["unit_kerja"];
+    ${'instansi'.$i} = $row["instansi"];
+    ${'pendidikan_terakhir'.$i} = $row["pendidikan_terakhir"];
+    ${'pendidikan_tahun_lulus'.$i} = $row["pendidikan_tahun_lulus"];
+    ${'pendidikan_univ'.$i} = $row["pendidikan_univ"];
+    ${'pendidikan_tempat'.$i} = $row["pendidikan_tempat"];
+    ${'pendidikan_jurusan'.$i} = $row["pendidikan_jurusan"];
+    ${'status'.$i} = $row["status"];
+
+    $data[]=array(
+        'nip' => ${'NIP'.$i},
+        'nama' => ${'nama'.$i},
+        'no_karpeg' => ${'no_karpeg'.$i},
+        'jenis_kelamin' => ${'jenis_kelamin'.$i},
+        'agama' => ${'agama'.$i},
+        'tempat_lahir' => ${'tempat_lahir'.$i},
+        'tanggal_lahir' => ${'tanggal_lahir'.$i},
+        'tmt_cpns' => ${'tmt_cpns'.$i},
+        'tmt_pns' => ${'tmt_pns'.$i},
+        'tmt_pangkat_terakhir' => ${'tmt_pangkat_terakhir'.$i},
+        'golongan' => ${'golongan'.$i},
+        'jabatan' => ${'jabatan'.$i},
+        'unit_kerja' => ${'unit_kerja'.$i},
+        'instansi' => ${'instansi'.$i},
+        'pendidikan_terakhir' => ${'pendidikan_terakhir'.$i},
+        'pendidikan_tahun_lulus' => ${'pendidikan_tahun_lulus'.$i},
+        'pendidikan_univ' => ${'pendidikan_univ'.$i},
+        'pendidikan_tempat' => ${'pendidikan_tempat'.$i},
+        'pendidikan_jurusan' => ${'pendidikan_jurusan'.$i},
+        'status' => ${'status'.$i});
 }
 
 /*
