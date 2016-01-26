@@ -79,6 +79,10 @@ switch ($bulan) {
         $tanggal=$hari."Bulan".$tahun;;
 }
 
+$nomor_surat = (isset($_POST['nomor_surat'])) ? $_POST['nomor_surat'] : '';
+$nomor_surat = trim(''.$nomor_surat);
+
+
 for($j=1; $j<=10; $j++){
 ${'NIP'.$j} = (isset($_POST['NIP'.$j])) ? $_POST['NIP'.$j] : '';
 ${'NIP'.$j} = trim(''.${'NIP'.$j});

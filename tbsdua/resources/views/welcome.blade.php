@@ -68,7 +68,27 @@ $('#surat').on('change',function(){
       </select>
     </div>
 
+<div class="form-group" >
+ <label class="control-label" for="nomor_surat">Nomor Surat:</label>
+      <input name="nomor_surat" id="nomor_surat" type="text" class="form-control"/>
+</div>
 
+      
+    <div class="form-group" id="grpid">
+    <label class="control-label" for="grp_id">Jumlah Identitas</label>
+      <select id="jml_id" name="jml_id" class="selectpicker" data-live-search="true" title="Jumlah identitas" >
+       <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </div>
 
 <div class="form-group" >
  <label class="control-label" for="NIP">Masukkan NIP:</label>
@@ -113,23 +133,109 @@ $('#surat').on('change',function(){
 
 <script>
         
-for( i=2; i<=10; i++ ){
-        $('#grpnip'+ i).hide();
-}
+
+for(i=2; i<=10; i++){
+        $('#grpnip'+i).hide();
+      }
+
+        $('#grpid').hide();
         $('#surat').on('change', function() {
     if($(this).val() == "demo3.docx" || $(this).val() == "demo1.docx" ) {
-       for( i=2; i<=10; i++ ){
-        $('#grpnip'+ i).show();
-}
-
-
+        $('#grpid').show();
     } 
+
     else{
-      for( i=2; i<=10; i++ ){
-        $('#grpnip'+ i).hide();
-}
+        $('#grpid').hide();
     }
 });
+
+$('#jml_id').on('change', function() {
+    if($(this).val() == "1" ) {
+        $('#grpnip').show();
+    
+for(i=2; i<=10; i++){
+        $('#grpnip'+i).hide();
+      }
+    }
+
+    else if($(this).val() == "2" ) {
+        $('#grpnip2').show();
+    for(i=3; i<=10; i++){
+        $('#grpnip'+i).hide();
+      }
+ 
+    }
+
+else if($(this).val() == "3" ) {
+        for(i=2; i<=3; i++){
+        $('#grpnip'+i).show();
+        
+      }
+      for(i=4; i<=10; i++){
+        $('#grpnip'+i).hide();
+      }
+
+    }
+else if($(this).val() == "4" ) {
+        for(i=2; i<=4; i++){
+        $('#grpnip'+i).show();
+      
+      }
+      for(i=5; i<=10; i++){
+        $('#grpnip'+i).hide();
+      }
+    }
+else if($(this).val() == "5" ) {
+        for(i=2; i<=5; i++){
+        $('#grpnip'+i).show();
+      
+      }
+      for(i=6; i<=10; i++){
+        $('#grpnip'+i).hide();
+      }
+    }
+else if($(this).val() == "6" ) {
+        for(i=2; i<=6; i++){
+        $('#grpnip'+i).show();
+      }
+      for(i=7; i<=10; i++){
+        $('#grpnip'+i).hide();
+      }
+    }
+    else if($(this).val() == "7" ) {
+        for(i=2; i<=7; i++){
+        $('#grpnip'+i).show();
+      }
+      for(i=8; i<=10; i++){
+        $('#grpnip'+i).hide();
+      }
+    }
+else if($(this).val() == "8" ) {
+        for(i=2; i<=8; i++){
+        $('#grpnip'+i).show();
+      }
+      for(i=9; i<=10; i++){
+        $('#grpnip'+i).hide();
+      }
+
+    }
+else if($(this).val() == "9" ) {
+        for(i=2; i<=9; i++){
+        $('#grpnip'+i).show();
+      }
+      $('#grpnip10').hide();
+    }
+else if($(this).val() == "10" ) {
+        for(i=2; i<=10; i++){
+        $('#grpnip'+i).show();
+      }
+    }
+
+
+
+  });
+    
+
     </script>
 
 
