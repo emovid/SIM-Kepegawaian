@@ -79,18 +79,18 @@ switch ($bulan) {
         $tanggal=$hari."Bulan".$tahun;;
 }
 
-for($j=1; $j<=10; $j++){
-    ${'NIP'.$j} = (isset($_POST['NIP'.$j])) ? $_POST['NIP'.$j] : '';
-    ${'NIP'.$j} = trim(''.${'NIP'.$j});
-    //if (${'NIP'.$j}=='') ${'NIP'.$j} = "(no name)";
-}
+for($i=1; $i<=10; $i++){
+    ${'NIP'.$i} = (isset($_POST['NIP'.$i])) ? $_POST['NIP'.$i] : '';
+    ${'NIP'.$i} = trim(''.${'NIP'.$i});
+    //if (${'NIP'.$j}=='') ${'NIP'.$j} = "(no name)";   
 
-$data=array();
-$jml_id = (isset($_POST['jml_id'])) ? $_POST['jml_id'] : '';
+}
 
 
 for($i=1; $i<=10; $i++){
-    ${'nama'.$i} = "";
+     // $NIP = ${'NIP'.$i}; 
+   // if($NIP==''){
+     ${'nama'.$i} = "";
     ${'no_karpeg'.$i} = "";
     ${'jenis_kelamin'.$i} = "";
     ${'agama'.$i} = "";
@@ -109,7 +109,34 @@ for($i=1; $i<=10; $i++){
     ${'pendidikan_tempat'.$i} = "";
     ${'pendidikan_jurusan'.$i} = "";
     ${'status'.$i} = "";
+// }
+// else{
+//     ${'nama'.$i} = "-";
+//     ${'no_karpeg'.$i} = "-";
+//     ${'jenis_kelamin'.$i} = "-";
+//     ${'agama'.$i} = "-";
+//     ${'tempat_lahir'.$i} = "-";
+//     ${'tanggal_lahir'.$i} = "-";
+//     ${'tmt_cpns'.$i} = "-";
+//     ${'tmt_pns'.$i} = "-";
+//     ${'tmt_pangkat_terakhir'.$i} = "-";
+//     ${'golongan'.$i} = "-";
+//     ${'jabatan'.$i} = "-";
+//     ${'unit_kerja'.$i} = "-";
+//     ${'instansi'.$i} = "-";
+//     ${'pendidikan_terakhir'.$i} = "-";
+//     ${'pendidikan_tahun_lulus'.$i} = "-";
+//     ${'pendidikan_univ'.$i} = "-";
+//     ${'pendidikan_tempat'.$i} = "-";
+//     ${'pendidikan_jurusan'.$i} = "-";
+//     ${'status'.$i} = "-";   
+// }
+
 }
+
+$data=array();
+$jml_id = (isset($_POST['jml_id'])) ? $_POST['jml_id'] : '';
+
 
 for($i=1; $i<=$jml_id; $i++){
 
@@ -122,24 +149,102 @@ for($i=1; $i<=$jml_id; $i++){
 
 
     ${'nama'.$i} = $row["nama"];
+    if(${'nama'.$i}==""){
+        ${'nama'.$i}="-";
+    }    
     ${'no_karpeg'.$i} = $row["no_karpeg"];
+    if(${'no_karpeg'.$i}==""){
+        ${'no_karpeg'.$i}="-";
+    }
     ${'jenis_kelamin'.$i} = $row["jenis_kelamin"];
+    if(${'jenis_kelamin'.$i}==""){
+        ${'jenis_kelamin'.$i}="-";
+    }
     ${'agama'.$i} = $row["agama"];
+    if(${'agama'.$i}==""){
+        ${'agama'.$i}="-";
+    }
     ${'tempat_lahir'.$i} = $row["tempat_lahir"];
+    if(${'tempat_lahir'.$i}==""){
+        ${'tempat_lahir'.$i}="-";
+    }
     ${'tanggal_lahir'.$i} = $row["tanggal_lahir"];
+        if(${'tanggal_lahir'.$i}==""){
+        ${'tanggal_lahir'.$i}="-";
+    }
     ${'tmt_cpns'.$i} = $row["tmt_cpns"];
+    if(${'tmt_cpns'.$i}==""){
+        ${'tmt_cpns'.$i}="-";
+    }
     ${'tmt_pns'.$i} = $row["tmt_pns"];
+    if(${'tmt_pns'.$i}==""){
+        ${'tmt_pns'.$i}="-";
+    }
     ${'tmt_pangkat_terakhir'.$i} = $row["tmt_pangkat_terakhir"];
+    if(${'tmt_pangkat_terakhir'.$i}==""){
+        ${'tmt_pangkat_terakhir'.$i}="-";
+    }
     ${'golongan'.$i} = $row["golongan"];
+        if(${'golongan'.$i}==""){
+        ${'golongan'.$i}="-";
+    }
     ${'jabatan'.$i} = $row["jabatan"];
+    if(${'jabatan'.$i}==""){
+        ${'jabatan'.$i}="-";
+    }
     ${'unit_kerja'.$i} = $row["unit_kerja"];
+    if(${'unit_kerja'.$i}==""){
+        ${'unit_kerja'.$i}="-";
+    }
     ${'instansi'.$i} = $row["instansi"];
+        if(${'instansi'.$i}==""){
+        ${'instansi'.$i}="-";
+    }
     ${'pendidikan_terakhir'.$i} = $row["pendidikan_terakhir"];
+        if(${'pendidikan_terakhir'.$i}==""){
+        ${'pendidikan_terakhir'.$i}="-";
+    }
     ${'pendidikan_tahun_lulus'.$i} = $row["pendidikan_tahun_lulus"];
+    if(${'pendidikan_tahun_lulus'.$i}==""){
+        ${'pendidikan_tahun_lulus'.$i}="-";
+    }
     ${'pendidikan_univ'.$i} = $row["pendidikan_univ"];
+     if(${'pendidikan_univ'.$i}==""){
+        ${'pendidikan_univ'.$i}="-";
+    }
     ${'pendidikan_tempat'.$i} = $row["pendidikan_tempat"];
+    if(${'pendidikan_tempat'.$i}==""){
+        ${'pendidikan_tempat'.$i}="-";
+    }
     ${'pendidikan_jurusan'.$i} = $row["pendidikan_jurusan"];
+    if(${'pendidikan_jurusan'.$i}==""){
+        ${'pendidikan_jurusan'.$i}="-";
+    }
     ${'status'.$i} = $row["status"];
+    if(${'status'.$i}==""){
+        ${'status'.$i}="-";
+    }
+
+ // ${'nama'.$i} = $row["nama"];
+ //    ${'no_karpeg'.$i} = $row["no_karpeg"];
+ //    ${'jenis_kelamin'.$i} = $row["jenis_kelamin"];
+ //    ${'agama'.$i} = $row["agama"];
+ //    ${'tempat_lahir'.$i} = $row["tempat_lahir"];
+ //    ${'tanggal_lahir'.$i} = $row["tanggal_lahir"];
+ //    ${'tmt_cpns'.$i} = $row["tmt_cpns"];
+ //    ${'tmt_pns'.$i} = $row["tmt_pns"];
+ //    ${'tmt_pangkat_terakhir'.$i} = $row["tmt_pangkat_terakhir"];
+ //    ${'golongan'.$i} = $row["golongan"];
+ //    ${'jabatan'.$i} = $row["jabatan"];
+ //    ${'unit_kerja'.$i} = $row["unit_kerja"];
+ //    ${'instansi'.$i} = $row["instansi"];
+ //    ${'pendidikan_terakhir'.$i} = $row["pendidikan_terakhir"];
+ //    ${'pendidikan_tahun_lulus'.$i} = $row["pendidikan_tahun_lulus"];
+ //    ${'pendidikan_univ'.$i} = $row["pendidikan_univ"];
+ //    ${'pendidikan_tempat'.$i} = $row["pendidikan_tempat"];
+ //    ${'pendidikan_jurusan'.$i} = $row["pendidikan_jurusan"];
+ //    ${'status'.$i} = $row["status"];
+
 
     $data[]=array(
         'nip' => ${'NIP'.$i},
@@ -162,8 +267,6 @@ for($i=1; $i<=$jml_id; $i++){
         'pendidikan_tempat' => ${'pendidikan_tempat'.$i},
         'pendidikan_jurusan' => ${'pendidikan_jurusan'.$i},
         'status' => ${'status'.$i});
-
-
 
 }
 
