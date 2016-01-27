@@ -55,15 +55,15 @@ $('#surat').on('change',function(){
         <option value="permohonan_pensiun.docx">Permohonan Pensiun</option>
         <option value="plt(penunjukkan).docx">PLT(Penunjukkan)</option>
         <option value="rekomendasi.docx">Rekomendasi KA Dinas</option>
-        <option value="18">Seleksi Masuk Perguruan Tinggi</option>
-        <option value="19">SPMJ(Surat Pernyataan Telah Menduduki Jabatan</option>
-        <option value="20">SPMT(Surat Pernyataan Melakukan Tugas</option>
-        <option value="21">SPPD(Surat Perintah Perjalanan Dinas)</option>
-        <option value="22">Edaran</option>
-        <option value="23">Pemberitahuan</option>
-        <option value="24">Tugas 1</option>
-        <option value="25">Tugas 2</option>
-        <option value="26">Undangan</option>
+        <option value="seleksi_masuk_perguruan_tinggi.docx">Seleksi Masuk Perguruan Tinggi</option>
+        <option value="SPMJ.docx">SPMJ(Surat Pernyataan Telah Menduduki Jabatan</option>
+        <option value="SPMT.docx">SPMT(Surat Pernyataan Melakukan Tugas</option>
+        <option value="SPPD.docx">SPPD(Surat Perintah Perjalanan Dinas)</option>
+        <option value="keterangan_anak_yatim.docx">Keterangan Anak Yatim</option>
+        <option value="keterangan_tidak_dihukum.docx">Keterangan Sedang Tidak Menjalani Hukuman</option>
+        <option value="laporan_kematian.docx">Laporan Kematian</option>
+        <option value="pembatalan_permohonan_cuti.docx">Pembatalan Permohonan Cuti Besar</option>
+        <option value="surat_tugas.docx">Surat Perintah Tugas</option>
       </select>
     </div>
 
