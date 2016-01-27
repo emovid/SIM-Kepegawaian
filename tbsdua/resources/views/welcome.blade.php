@@ -41,30 +41,29 @@ $('#surat').on('change',function(){
        <option value="cuti_besar.docx">Cuti Besar</option>
         <option value="demo2.docx">Cuti Haji</option>
         <option value="cuti_umroh.docx">Cuti Umroh</option>
-        <option value="demo3.docx">Cuti Tahunan Penting</option>
-        <option value="4">Ijin Belajar</option>
-        <option value="demo1.docx">Ijin Cuti Bersalin Naban</option>
-        <option value="6">Ijin Cuti Bersalin</option>
+        <option value="cuti_alasan_penting.docx">Cuti Alasan Penting</option>
+        <option value="cuti_tahunan.docx">Cuti Tahunan</option>
+        <option value="ijin_belajar.docx">Ijin Belajar</option>
+        <option value="ijin_cuti_bersalin_naban.docx">Ijin Cuti Bersalin Naban</option>
+        <option value="ijin_cuti_bersalin.docx">Ijin Cuti Bersalin</option>
         <option value="7">Ijin Cuti Sakit Walikota</option>
-        <option value="8">Ijin Cuti Sakit</option>
+        <option value="ijin_cuti_sakit.docx">Ijin Cuti Sakit</option>
         <option value="9">Keuangan Bulanan</option>
         <option value="10">Koperasi Lina</option>
-        <option value="11">Pengajuan Taspen</option>
-        <option value="12">Pensiun Janda</option>
-        <option value="13">Pensiun, Sakit, Walikota</option>
-        <option value="14">Permohonan Ijin Belajar</option>
-        <option value="15">Permohonan Pensiun</option>
-        <option value="16">PLT(Penunjukkan)</option>
-        <option value="17">Rekomendasi KA Dinas</option>
-        <option value="18">Seleksi Masuk Perguruan Tinggi</option>
-        <option value="19">SPMJ(Surat Pernyataan Telah Menduduki Jabatan</option>
-        <option value="20">SPMT(Surat Pernyataan Melakukan Tugas</option>
-        <option value="21">SPPD(Surat Perintah Perjalanan Dinas)</option>
-        <option value="22">Edaran</option>
-        <option value="23">Pemberitahuan</option>
-        <option value="24">Tugas 1</option>
-        <option value="25">Tugas 2</option>
-        <option value="26">Undangan</option>
+        <option value="pengajuan_taspen.docx">Pengajuan Taspen</option>
+        <option value="pensiun_janda.docx">Pensiun Janda</option>
+        <option value="permohonan_pensiun.docx">Permohonan Pensiun</option>
+        <option value="plt(penunjukkan).docx">PLT(Penunjukkan)</option>
+        <option value="rekomendasi.docx">Rekomendasi KA Dinas</option>
+        <option value="seleksi_masuk_perguruan_tinggi.docx">Seleksi Masuk Perguruan Tinggi</option>
+        <option value="SPMJ.docx">SPMJ(Surat Pernyataan Telah Menduduki Jabatan</option>
+        <option value="SPMT.docx">SPMT(Surat Pernyataan Melakukan Tugas</option>
+        <option value="SPPD.docx">SPPD(Surat Perintah Perjalanan Dinas)</option>
+        <option value="keterangan_anak_yatim.docx">Keterangan Anak Yatim</option>
+        <option value="keterangan_tidak_dihukum.docx">Keterangan Sedang Tidak Menjalani Hukuman</option>
+        <option value="laporan_kematian.docx">Laporan Kematian</option>
+        <option value="pembatalan_permohonan_cuti.docx">Pembatalan Permohonan Cuti Besar</option>
+        <option value="surat_tugas.docx">Surat Perintah Tugas</option>
       </select>
     </div>
 
@@ -90,13 +89,14 @@ $('#surat').on('change',function(){
       </select>
     </div>
 
+
 <div class="form-group" >
  <label class="control-label" for="NIP">Masukkan NIP:</label>
       <input name="NIP1" id="NIP1" type="text" class="form-control"/>
 </div>
 <div class="form-group" id="grpnip2">
  <label class="control-label" for="NIP2">Masukkan NIP 2:</label>
-      <input name="NIP2" id="NIP2" type="text" class="form-control"/>
+      <input name="NIP2" id="NIP2" type="text" class="form-control" />
 </div>
 <div class="form-group" id="grpnip3">
  <label class="control-label" for="NIP3">Masukkan NIP 3:</label>
@@ -138,14 +138,19 @@ for(i=2; i<=10; i++){
         $('#grpnip'+i).hide();
       }
 
+
         $('#grpid').hide();
         $('#surat').on('change', function() {
-    if($(this).val() == "demo3.docx" || $(this).val() == "demo1.docx" ) {
+    if($(this).val() == "ijin_belajar.docx" || $(this).val() == "cuti_besar.docx" || $(this).val() == "pengajuan_taspen.docx" || $(this).val() == "permohonan_pensiun.docx") {
         $('#grpid').show();
     } 
 
     else{
         $('#grpid').hide();
+        for(i=2; i<=10; i++){
+        $('#grpnip'+i).hide();
+      }
+
     }
 });
 
@@ -153,8 +158,10 @@ $('#jml_id').on('change', function() {
     if($(this).val() == "1" ) {
         $('#grpnip').show();
     
-for(i=2; i<=10; i++){
+      for(i=2; i<=10; i++){
+        //document.getElementById('NIP'+i).value = "";
         $('#grpnip'+i).hide();
+    
       }
     }
 
@@ -230,9 +237,6 @@ else if($(this).val() == "10" ) {
         $('#grpnip'+i).show();
       }
     }
-
-
-
   });
     
 
@@ -245,17 +249,8 @@ else if($(this).val() == "10" ) {
         <input type="submit" name="btn_template" value="See template" />
         <input type="submit" name="btn_script" value="See PHP script" /> 
         -->
-    
-    
 
   </form>
-
-
-
-
-
-  
-
 </body>
 
 <script type="text/javascript">
