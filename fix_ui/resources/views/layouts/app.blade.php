@@ -21,6 +21,7 @@
   @yield('head.style')
 
   @yield('head.script')
+  
   <style>
         body {
             font-family: 'Lato';
@@ -32,8 +33,9 @@
         }
     </style>
 </head>
+
 <body id="app-layout">
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default">  
       <div class="container">
           <div class="navbar-header">
 
@@ -79,6 +81,8 @@
       </div>
   </nav>
 
+  @yield('alert')
+  
   @yield('content')
 
   <!-- JavaScripts -->

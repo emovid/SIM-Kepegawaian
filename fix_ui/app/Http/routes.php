@@ -35,5 +35,12 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('/home', 'HomeController@index');
   
-    Route::get('/edit', 'HomeController@edit');
+    Route::get('/getData', 'HomeController@getData');
+  
+    Route::resource('employees','HomeController');
+    Route::get('employees/{id}/delete', 'HomeController@delete');
+    Route::post('search', 'HomeController@search');
+    Route::get('search', 'HomeController@search');
 });
+
+

@@ -17,7 +17,7 @@
                       <a href="{{ url('/home') }}">Buat</a>
                     </li>
                     <li>
-                      <a href="{{ url('/edit') }}">Edit Data</a>
+                      <a href="{{ url('/getData') }}">Data</a>
                     </li>
                   </ul>
                   <br>
