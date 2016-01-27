@@ -37,10 +37,10 @@ Route::group(['middleware' => 'web'], function () {
   
     Route::get('/getData', 'HomeController@getData');
   
-    Route::resource('employees','HomeController');
-    Route::get('employees/{id}/delete', 'HomeController@delete');
-    Route::post('search', 'HomeController@search');
-    Route::get('search', 'HomeController@search');
+    Route::resource('getData/employees','HomeController');
+    Route::get('getData/employees/{id}/delete', 'HomeController@delete');
+    Route::post('getData/search', 'SearchController@search');
+    Route::get('getData/search', 'SearchController@search');
 });
 
 

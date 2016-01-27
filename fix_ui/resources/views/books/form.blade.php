@@ -15,23 +15,18 @@
     {!! Form::label('Jenis Kelamin', 'Jenis Kelamin:') !!}
     {!! Form::text('jenis_kelamin', null, ['class'=> 'form-control']) !!}
 </div>
-
 <div class="form-group">
     {!! Form::label('Agama', 'Agama:') !!}
     {!! Form::text('agama', null, ['class'=> 'form-control']) !!}
 </div>
-
 <div class="form-group">
     {!! Form::label('Tempat Lahir', 'Tempat Lahir:') !!}
     {!! Form::text('tempat_lahir', null, ['class'=> 'form-control']) !!}
 </div>
-
 <div class="form-group">
     {!! Form::label('Tanggal Lahir', 'Tanggal Lahir:') !!}
     {!! Form::text('tanggal_lahir', null, ['class'=> 'form-control']) !!}
 </div>
-
-
 <div class="form-group">
     {!! Form::label('TMT CPNS', 'TMT CPNS:') !!}
     {!! Form::text('tmt_cpns', null, ['class'=> 'form-control']) !!}
@@ -41,16 +36,16 @@
     {!! Form::text('tmt_pns', null, ['class'=> 'form-control']) !!}
 </div>
 <div class="form-group">
-    {!! Form::label('TMT Pangkat Terakhir', 'Tanggal Lahir:') !!}
+    {!! Form::label('TMT Pangkat Terakhir', 'TMT Pangkat Terakhir:') !!}
     {!! Form::text('tmt_pangkat_terakhir', null, ['class'=> 'form-control']) !!}
-</div>
-<div class="form-group">
-    {!! Form::label('Golongan', 'Golongan:') !!}
-    {!! Form::text('golongan', null, ['class'=> 'form-control']) !!}
 </div>
 <div class="form-group">
     {!! Form::label('Jabatan', 'Jabatan:') !!}
     {!! Form::text('jabatan', null, ['class'=> 'form-control']) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('Golongan', 'Golongan:') !!}
+    {!! Form::text('golongan', null, ['class'=> 'form-control']) !!}
 </div>
 <div class="form-group">
     {!! Form::label('Unit Kerja', 'Unit Kerja:') !!}
@@ -85,12 +80,6 @@
     {!! Form::label('Status', 'Status:') !!}
     {!! Form::text('status', null, ['class'=> 'form-control']) !!}
 </div>
-
-<!--<div class="form-group">
-    {!! Form::label('published_at', 'Published On:') !!}
-    {!! Form::input('date', 'published_at', Carbon\Carbon::now()->format('Y-m-d'), ['class'=> 'form-control']) !!}
-</div>-->
-
 <div class="form-group">
     {!! Form::submit($submitTextButton, array('class' => 'btn btn-primary')) !!}
 </div>

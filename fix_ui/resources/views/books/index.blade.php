@@ -4,7 +4,7 @@
 
 <div class="col-xs-4">
   <div class="form-group">
-  {!! Form::open(['url'=>'search', 'class'=>'form-group']) !!}  
+  {!! Form::open(['url'=>'getData/search', 'class'=>'form-group']) !!}  
     {!! Form::text('kata_kunci',null,['class'=>'form-control','placeholder'=>'Keywords']) !!}
     <button class="btn btn-round glyphicon glyphicon-search" type="submit"></button>
   {!! Form::close() !!}
@@ -12,7 +12,7 @@
   </div>
 </div>
 <div class="col-xs-6"></div>
-<div class="col-cs-2"><a href="{{ url('/employees/create') }}" class="btn btn-primary">Tambah Pegawai</a></div>
+<div class="col-cs-2"><a href="{{ url('getData/employees/create') }}" class="btn btn-primary">Tambah Pegawai</a></div>
 
 
 <div>
@@ -72,10 +72,9 @@
                     <td>{{ $book->pendidikan_jurusan }}</td>
                     <td>{{ $book->status }}</td>   -->
                     
-                    <td><a class="btn btn-primary" href="{{ url('/employees', $book->id)}}"><span class="glyphicon glyphicon-user"></a></td>
-                    <!--<td><a class="btn btn-primary" href="{{ action('HomeController@show', [$book->id])}}">Read</a></td>-->
-                    <!--<td><a class="btn btn-primary" href="/books/{{$book->id}}">Read</a></td>-->
-                    <td><a class="btn btn-warning" href="{{ url('/employees/'.$book->id.'/edit')}}"><span class="glyphicon glyphicon-pencil"></a></td>
+                    <td><a class="btn btn-primary" href="{{ url('getData/employees', $book->id)}}"><span class="glyphicon glyphicon-user"></a></td>
+<!--                    <td><a class="btn btn-primary" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></a></td>-->
+                    <td><a class="btn btn-warning" href="{{ url('getData/employees/'.$book->id.'/edit')}}"><span class="glyphicon glyphicon-pencil"></a></td>
                     <td><a class="btn btn-danger" href="{{ action('HomeController@delete', $book->id) }}"><span class="glyphicon glyphicon-trash"></a></td>
                 </tr>
                 @endforeach
@@ -87,6 +86,10 @@
     @else
         There are no book in the book list
     @endif
+  
 </div>
-<div class="col-md-2"></div>
+
+
+
+
 @stop
