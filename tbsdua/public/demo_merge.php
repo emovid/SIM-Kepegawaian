@@ -84,17 +84,12 @@ $nomor_surat = trim(''.$nomor_surat);
 if ($nomor_surat=='') $nomor_surat = "(nomor surat)";
 
 
-for($i=1; $i<=10; $i++){
-    ${'NIP'.$i} = (isset($_POST['NIP'.$i])) ? $_POST['NIP'.$i] : '';
-    ${'NIP'.$i} = trim(''.${'NIP'.$i});
-    //if (${'NIP'.$j}=='') ${'NIP'.$j} = "(no name)";   
-
-}
-
 
 for($i=1; $i<=10; $i++){
      // $NIP = ${'NIP'.$i}; 
    // if($NIP==''){
+
+    ${'NIP'.$i} = "";
      ${'nama'.$i} = "";
     ${'no_karpeg'.$i} = "";
     ${'jenis_kelamin'.$i} = "";
@@ -140,12 +135,22 @@ for($i=1; $i<=10; $i++){
 
 }
 
-$data=array();
 $jml_id = (isset($_POST['jml_id'])) ? $_POST['jml_id'] : '';
 
 if($jml_id==''){
     $jml_id=1;
 }
+
+
+for($i=1; $i<=$jml_id; $i++){
+    ${'NIP'.$i} = (isset($_POST['NIP'.$i])) ? $_POST['NIP'.$i] : '';
+    ${'NIP'.$i} = trim(''.${'NIP'.$i});
+    //if (${'NIP'.$j}=='') ${'NIP'.$j} = "(no name)";   
+
+}
+
+
+$data=array();
 
 for($i=1; $i<=$jml_id; $i++){
 

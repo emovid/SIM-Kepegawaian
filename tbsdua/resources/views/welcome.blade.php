@@ -89,13 +89,14 @@ $('#surat').on('change',function(){
       </select>
     </div>
 
+
 <div class="form-group" >
  <label class="control-label" for="NIP">Masukkan NIP:</label>
       <input name="NIP1" id="NIP1" type="text" class="form-control"/>
 </div>
 <div class="form-group" id="grpnip2">
  <label class="control-label" for="NIP2">Masukkan NIP 2:</label>
-      <input name="NIP2" id="NIP2" type="text" class="form-control"/>
+      <input name="NIP2" id="NIP2" type="text" class="form-control" />
 </div>
 <div class="form-group" id="grpnip3">
  <label class="control-label" for="NIP3">Masukkan NIP 3:</label>
@@ -146,6 +147,10 @@ for(i=2; i<=10; i++){
 
     else{
         $('#grpid').hide();
+        for(i=2; i<=10; i++){
+        $('#grpnip'+i).hide();
+      }
+
     }
 });
 
@@ -153,8 +158,10 @@ $('#jml_id').on('change', function() {
     if($(this).val() == "1" ) {
         $('#grpnip').show();
     
-for(i=2; i<=10; i++){
+      for(i=2; i<=10; i++){
+        //document.getElementById('NIP'+i).value = "";
         $('#grpnip'+i).hide();
+    
       }
     }
 
@@ -230,9 +237,6 @@ else if($(this).val() == "10" ) {
         $('#grpnip'+i).show();
       }
     }
-
-
-
   });
     
 
@@ -245,17 +249,8 @@ else if($(this).val() == "10" ) {
         <input type="submit" name="btn_template" value="See template" />
         <input type="submit" name="btn_script" value="See PHP script" /> 
         -->
-    
-    
 
   </form>
-
-
-
-
-
-  
-
 </body>
 
 <script type="text/javascript">
