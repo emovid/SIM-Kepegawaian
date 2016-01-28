@@ -17,7 +17,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                NIP: 
+                                NIP : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{ $book->nip}}</div>
@@ -27,7 +27,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                No Karpeg: 
+                                Nomor Kartu Pegawai : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{ $book->no_karpeg}}</div>
@@ -37,7 +37,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                Nama: 
+                                Nama : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{ $book->nama}}</div>
@@ -47,7 +47,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                Jenis Kelamin: 
+                                Jenis Kelamin : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{ $book->jenis_kelamin}}</div>
@@ -57,7 +57,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                Agama: 
+                                Agama : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{ $book->agama}}</div>
@@ -67,7 +67,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                Tempat Lahir: 
+                                Tempat Lahir : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{ $book->tempat_lahir}}</div>
@@ -97,7 +97,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                TMT PNS: 
+                                TMT PNS : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{substr($book->tmt_pns,0,11)}}</div>
@@ -107,7 +107,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                TMT Pangkat Terakhir: 
+                                TMT Pangkat Terakhir : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{ substr($book->tmt_pangkat_terakhir,0,11)}}</div>
@@ -117,17 +117,17 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                Jabatan: 
+                                Pangkat : 
                             </div>
                         </label>
-                        <div class="col-sm-6">{{ $book->jabatan}}</div>
+                        <div class="col-sm-6">{{ $book->pangkat}}</div>
                     </div>
                 </div>
        <div class="row">
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                Golongan: 
+                                Golongan : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{ $book->golongan}}</div>
@@ -137,7 +137,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                Jabatan: 
+                                Jabatan : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{ $book->jabatan}}</div>
@@ -147,7 +147,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                Unit Kerja: 
+                                Unit Kerja : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{ $book->unit_kerja}}</div>
@@ -157,7 +157,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                Instansi: 
+                                Instansi : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{ $book->Instansi}}</div>
@@ -167,7 +167,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                Pendidikan Terakhir :
+                                Jenjang Pendidikan Terakhir :
                             </div>
                         </label>
                         <div class="col-sm-6">{{ $book->pendidikan_terakhir}}</div>
@@ -177,7 +177,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                Pendidikan Tahun Lulus : 
+                                Tahun Lulus : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{ $book->pendidikan_tahun_lulus}}</div>
@@ -187,7 +187,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                Pendidikan Universitas: 
+                                Nama Instansi Pendidikan : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{ $book->pendidikan_univ}}</div>
@@ -197,7 +197,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                Pendidikan Tempat: 
+                                Lokasi Intansi Pendidikan : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{ $book->pendidikan_tempat}}</div>
@@ -208,7 +208,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                Pendidikan Jurusan: 
+                                Jurusan : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{ $book->pendidikan_jurusan}}</div>
@@ -218,7 +218,7 @@
                     <div class="form-group">
                         <label class="col-sm-6">
                             <div class="pull-right">
-                                Status: 
+                                Status : 
                             </div>
                         </label>
                         <div class="col-sm-6">{{ $book->status}}</div>
