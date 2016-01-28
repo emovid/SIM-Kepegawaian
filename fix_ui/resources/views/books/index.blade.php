@@ -86,9 +86,8 @@
                     <td>{{ $book->pendidikan_jurusan }}</td>
                     <td>{{ $book->status }}</td>   -->
                     
-                    <td><a class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Lihat Data" href="{{ url('getData/employees', $book->id)}}"><span class="glyphicon glyphicon-user"></a></td>
+                    <td><a class="btn btn-primary" href="{{ url('getData/employees', $book->id)}}"><span class="glyphicon glyphicon-user"></a></td>
 <!--                    <td><a class="btn btn-primary" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></a></td>-->
-
                     <td><a class="btn btn-warning" href="{{ url('getData/employees/'.$book->id.'/edit')}}"><span class="glyphicon glyphicon-pencil"></a></td>
                     <td><a class="btn btn-danger" data-toggle="modal" href="#" data-target="#modal"><span class="glyphicon glyphicon-trash"></a></td>
                     </tr>   
@@ -113,11 +112,6 @@
                                 </div>
                             </div>
                         </div>
-
-                    <td><a class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="Edit Data" href="{{ url('getData/employees/'.$book->id.'/edit')}}"><span class="glyphicon glyphicon-pencil"></a></td>
-                    <td><a class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Hapus Data" href="{{ action('HomeController@delete', $book->id) }}"><span class="glyphicon glyphicon-trash"></a></td>
-                </tr>
-
                 @endforeach
             </tbody>
         </table>
