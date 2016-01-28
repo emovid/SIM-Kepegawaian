@@ -1,6 +1,7 @@
 @extends('getData')
 
 @section('content.getData')
+<div>
 <h1>Perbarui Data Pegawai</h1>
 <hr/>
 <!--{!! Form::open(['method' => 'PATCH', 'url' => 'books/' . $book->id]) !!}-->
@@ -10,5 +11,5 @@
     @include('books.form', ['submitTextButton' => 'Perbarui'])
     
 {!! Form::close() !!}
-
+</div>
 @stop

@@ -26,15 +26,8 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
                 <div class="panel-body">
-                  <ul class="nav nav-tabs">
-                    <li>
-                      <a href="{{ url('/home') }}">Buat</a>
-                    </li>
-                    <li class="active">
-                      <a href="{{ url('/getData') }}">Data</a>
-                    </li>
-                  </ul>
-                  <br>
+                  
+                  @yield('content.nav')
                   
                   @yield('content.getData')
                   

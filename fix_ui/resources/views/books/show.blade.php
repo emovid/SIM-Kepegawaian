@@ -3,12 +3,7 @@
 @section('content.getData')
 <h1>Detail Pegawai</h1>
 <hr/>
-<div class="form-group">
-                        <a class="btn btn-warning" href="{{ url('getData/employees/'.$book->id.'/edit')}}">Perbarui</a>
-                        <a class="btn btn-danger" href="{{ action('HomeController@delete', $book->id) }}">Hapus</a>
-                    </div>
-<div class="panel panel-default">
-    <div class="panel-heading">Book</div>
+<div class="panel panel-group">
     <div class="panel-body">
         <div class="row col-md-10">
             <div class="row">
@@ -246,6 +241,13 @@
             
         </div>
     </div>
+</div>
+<div class="form-group col-xs-12">  
+  <a class="btn btn-primary" href="{{ url('getData')}}">Kembali</a>
+  <div style="float:right">
+  <a class="btn btn-warning" href="{{ url('getData/employees/'.$book->id.'/edit')}}">Perbarui</a>
+  <a class="btn btn-danger" href="{{ action('HomeController@delete', $book->id) }}">Hapus</a>
+  </div>
 </div>
 
 

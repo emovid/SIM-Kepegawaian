@@ -1,18 +1,33 @@
 @extends('getData')
 
+
+@section('content.nav')
+<ul class="nav nav-tabs">
+                    <li>
+                      <a href="{{ url('/home') }}">Buat</a>
+                    </li>
+                    <li class="active">
+                      <a href="{{ url('/getData') }}">Data</a>
+                    </li>
+                  </ul>
+                  <br>
+@stop
+
 @section('content.getData')
 
-<div class="col-xs-4">
-  <div class="form-group">
+<div class="col-xs-12"><a href="{{ url('getData/employees/create') }}" class="btn btn-primary">Tambah Pegawai</a>
+  <div class="form-group" style="float:right">
   {!! Form::open(['url'=>'getData/search', 'class'=>'form-group']) !!}  
-    {!! Form::text('kata_kunci',null,['class'=>'form-control','placeholder'=>'Keywords']) !!}
-    <button class="btn btn-round glyphicon glyphicon-search" type="submit"></button>
+    
+    <div class="col-xs-9">{!! Form::text('kata_kunci',null,['class'=>'form-control','placeholder'=>'Keywords']) !!}</div>
+<!--    <button class="btn btn-round glyphicon glyphicon-search" type="submit"></button>-->
+    <button type="submit" class="btn btn-default"><span class="fa fa-search"></span></button>
   {!! Form::close() !!}
-  
   </div>
 </div>
-<div class="col-xs-6"></div>
-<div class="col-cs-2"><a href="{{ url('getData/employees/create') }}" class="btn btn-primary">Tambah Pegawai</a></div>
+
+
+
 
 
 <div>
