@@ -28,17 +28,14 @@
                         
                       <select id="surat" name="tpl" class="form-control selectpicker" data-live-search="true" title="Pilih Jenis Surat" >
                         <option value="cuti_besar.docx">Cuti Besar</option>
-                        <option value="demo2.docx">Cuti Haji</option>
+                        <option value="cuti_haji.docx">Cuti Haji</option>
                         <option value="cuti_umroh.docx">Cuti Umroh</option>
                         <option value="cuti_alasan_penting.docx">Cuti Alasan Penting</option>
                         <option value="cuti_tahunan.docx">Cuti Tahunan</option>
                         <option value="ijin_belajar.docx">Ijin Belajar</option>
                         <option value="ijin_cuti_bersalin_naban.docx">Ijin Cuti Bersalin Naban</option>
                         <option value="ijin_cuti_bersalin.docx">Ijin Cuti Bersalin</option>
-                        <option value="7">Ijin Cuti Sakit Walikota</option>
                         <option value="ijin_cuti_sakit.docx">Ijin Cuti Sakit</option>
-                        <option value="9">Keuangan Bulanan</option>
-                        <option value="10">Koperasi Lina</option>
                         <option value="pengajuan_taspen.docx">Pengajuan Taspen</option>
                         <option value="pensiun_janda.docx">Pensiun Janda</option>
                         <option value="permohonan_pensiun.docx">Permohonan Pensiun</option>
@@ -166,7 +163,7 @@ $(document).ready(function() {
     }
     $('#grpid').hide();
     $('#surat').on('change', function() {
-    if($(this).val() == "ijin_belajar.docx" || $(this).val() == "cuti_besar.docx" || $(this).val() == "pengajuan_taspen.docx" || $(this).val() == "permohonan_pensiun.docx") {
+    if($(this).val() == "ijin_belajar.docx" || $(this).val() == "cuti_besar.docx" || $(this).val() == "pengajuan_taspen.docx" || $(this).val() == "permohonan_pensiun.docx" || $(this).val() == "cuti_haji.docx") {
       $('#grpid').show();
     } 
     else{
