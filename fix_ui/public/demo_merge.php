@@ -22,7 +22,7 @@ $TBS->Plugin(TBS_INSTALL, OPENTBS_PLUGIN); // load the OpenTBS plugin
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "fix_ui";
+$dbname = "cobacrud";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
