@@ -23,9 +23,8 @@
                   <br>
                     
                      <form role="form" id="form1" method="post" action="demo_merge.php" class="col-md-5 well">
-                      <label class="control-label" for="lunch">Jenis Surat:</label>
+                      <label class="control-label" for="lunch">Jenis Surat</label>
                     <div class="form-group">
-                        
                       <select id="surat" name="tpl" class="form-control selectpicker" data-live-search="true" title="Pilih Jenis Surat" >
                         <option value="cuti_besar.docx">Cuti Besar</option>
                         <option value="cuti_haji.docx">Cuti Haji</option>
@@ -53,66 +52,66 @@
                       </select>
                     </div>
                        <div class="form-group" >
-                       <label class="control-label" for="nomor_surat">Nomor Surat:</label>
+                       <label class="control-label" for="nomor_surat">Nomor Surat</label>
                             <input name="nomor_surat" id="nomor_surat" type="text" class="form-control"/>
                       </div>
 
 
-                          <div class="form-group" id="grpid">
-                          <label class="control-label" for="grp_id">Jumlah Identitas</label>
-                            <select id="jml_id" name="jml_id" class="selectpicker" data-live-search="true" title="Jumlah identitas" >
-                             <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                              <option value="6">6</option>
-                              <option value="7">7</option>
-                              <option value="8">8</option>
-                              <option value="9">9</option>
-                              <option value="10">10</option>
-                            </select>
-                          </div>
+                      <div class="form-group" id="grpid">
+                      <label class="control-label" for="grp_id">Jumlah Identitas</label><br>
+                        <select id="jml_id" name="jml_id" class="form-control selectpicker">
+                         <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </div>
 
 
                       <div class="form-group" >
-                       <label class="control-label" for="NIP">Masukkan NIP:</label>
+                       <label class="control-label" for="NIP">Masukkan NIP</label>
                             <input name="NIP1" id="NIP1" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip2">
-                       <label class="control-label" for="NIP2">Masukkan NIP 2:</label>
+                       <label class="control-label" for="NIP2">Masukkan NIP 2</label>
                             <input name="NIP2" id="NIP2" type="text" class="form-control" />
                       </div>
                       <div class="form-group" id="grpnip3">
-                       <label class="control-label" for="NIP3">Masukkan NIP 3:</label>
+                       <label class="control-label" for="NIP3">Masukkan NIP 3</label>
                             <input name="NIP3" id="NIP3" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip4">
-                       <label class="control-label" for="NIP4">Masukkan NIP 4:</label>
+                       <label class="control-label" for="NIP4">Masukkan NIP 4</label>
                             <input name="NIP4" id="NIP3" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip5">
-                       <label class="control-label" for="NIP5">Masukkan NIP 5:</label>
+                       <label class="control-label" for="NIP5">Masukkan NIP 5</label>
                             <input name="NIP5" id="NIP5" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip6">
-                       <label class="control-label" for="NIP6">Masukkan NIP 6:</label>
+                       <label class="control-label" for="NIP6">Masukkan NIP 6</label>
                             <input name="NIP6" id="NIP6" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip7">
-                       <label class="control-label" for="NIP7">Masukkan NIP 7:</label>
+                       <label class="control-label" for="NIP7">Masukkan NIP 7</label>
                             <input name="NIP7" id="NIP7" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip8">
-                       <label class="control-label" for="NIP8">Masukkan NIP 8:</label>
+                       <label class="control-label" for="NIP8">Masukkan NIP 8</label>
                             <input name="NIP8" id="NIP8" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip9">
-                       <label class="control-label" for="NIP9">Masukkan NIP 9:</label>
+                       <label class="control-label" for="NIP9">Masukkan NIP 9</label>
                             <input name="NIP9" id="NIP9" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip10">
-                       <label class="control-label" for="NIP10">Masukkan NIP 10:</label>
+                       <label class="control-label" for="NIP10">Masukkan NIP 10</label>
                             <input name="NIP10" id="NIP10" type="text" class="form-control"/>
                       </div>
 
