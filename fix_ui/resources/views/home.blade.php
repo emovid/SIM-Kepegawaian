@@ -121,7 +121,7 @@
 
 
                         <td>&nbsp;</td>
-                        <input type="submit" name="btn_result" value="Merge" class="btn btn-primary" />
+                        <input type="submit" name="btn_result" value="Cetak" class="btn btn-primary" />
                         <!--        
                         <input type="submit" name="btn_template" value="See template" />
                         <input type="submit" name="btn_script" value="See PHP script" /> 
