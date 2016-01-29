@@ -30,8 +30,15 @@
   </div>
   <div class="col-xs-3">
     <div class="form-group">
-    {!! Form::label('Jenis Kelamin', 'Jenis Kelamin') !!}
-    {!! Form::text('jenis_kelamin', null, ['class'=> 'form-control']) !!}
+      {!! Form::label('Jenis Kelamin', 'Jenis Kelamin') !!}
+<?php
+      $jenis_kelamin=$book->jenis_kelamin;
+      $pilihan='Wanita';
+      if($jenis_kelamin=='Wanita'){
+        $pilihan='Pria';
+      }
+?>
+      {!! Form::select('jenis_kelamin', [$jenis_kelamin, $pilihan], null, ['class'=>'form-control']) !!}
     </div>
   </div>
 </div>
