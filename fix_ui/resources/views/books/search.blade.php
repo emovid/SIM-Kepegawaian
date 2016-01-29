@@ -2,18 +2,20 @@
 
 @section('content.getData')
 
-<div class="col-xs-12">
-  <a class="btn btn-primary" href="{{ url('getData')}}">Kembali</a>
-  <div class="form-group" style="float:right">
+<div class="col-xs-4">
+  <div class="form-group">
   {!! Form::open(['url'=>'getData/search', 'class'=>'form-group']) !!}  
-    <div class="col-xs-9">{!! Form::text('kata_kunci',null,['class'=>'form-control','placeholder'=>'Keywords']) !!}</div>
-    <button type="submit" class="btn btn-default"><span class="fa fa-search"></span></button>
+    {!! Form::text('kata_kunci',null,['class'=>'form-control','placeholder'=>'Keywords']) !!}
+    <button class="btn btn-round glyphicon glyphicon-search" type="submit"></button>
   {!! Form::close() !!}
+  
   </div>
 </div>
+<div class="col-xs-6"></div>
+<div class="col-cs-2"><a href="{{ url('getData/employees/create') }}" class="btn btn-primary">Tambah Pegawai</a></div>
 
 
-<div>
+
     @if ($employees->count())
         <table class="table table-striped">
             <thead>
@@ -22,7 +24,6 @@
                     <th>NIP</th>
                    <!-- <th>No Karpeg</th> -->
                     <th>Nama</th>
-                  <th>Unit Kerja</th>
                   <!--  <th>Jenis Kelamin</th>
                     <th>Agama</th>
                     <th>Tempat Lahir</th>
@@ -32,8 +33,8 @@
                     <th>TMT Pangkat Terakhir</th>
                     <th>Golongan</th>
                     <th>Jabatan</th>
-                    
-                    <th>Instansi</th>  
+                    <th>Unit Kerja</th>
+                    <th>Instansi</th>
                     <th>Pendidikan Terakhir</th>
                     <th>Pendidikan Tahun Lulus</th>
                     <th>Pendidikan Univ</th>
@@ -53,8 +54,6 @@
                     <td>{{ $book->nip }}</td>
        <!--             <td>{{ $book->no_karpeg }}</td> -->
                     <td>{{ $book->nama }}</td>
-          
-                    <td>{{ $book->unit_kerja }}</td>
           <!--          <td>{{ $book->jenis_kelamin }}</td>
                     <td>{{ $book->agama }}</td>
                     <td>{{ $book->tempat_lahir }}</td>
@@ -64,7 +63,7 @@
                     <td>{{ $book->tmt_pangkat_terakhir }}</td>
                     <td>{{ $book->golongan }}</td>
                     <td>{{ $book->jabatan }}</td>
-                    
+                    <td>{{ $book->unit_kerja }}</td>
                     <td>{{ $book->instansi}}</td>
                     <td>{{ $book->pendidikan_terakhir }}</td>
                     <td>{{ $book->pendidikan_tahun_lulus }}</td>
@@ -72,9 +71,8 @@
                     <td>{{ $book->pendidikan_tempat }}</td>
                     <td>{{ $book->pendidikan_jurusan }}</td>
                     <td>{{ $book->status }}</td>   -->
-                    
-                   <td><a class="btn btn-primary" data-toggle="modal" data-placement="bottom" title="Lihat Data"  data-target="#modalshow<?php echo $book->id;?>" href="#"><span class="glyphicon glyphicon-user"></a></td>
-                   <div class="modal fade" id="modalshow<?php echo $book->id;?>" tabindex="-1" role="dialog">
+                    <td><a class="btn btn-primary" data-toggle="modal" data-placement="bottom" title="Lihat Data" data-target="#modalshow<?php echo $book->id;?>" href="#"><span class="glyphicon glyphicon-user"></a></td>
+                    <div class="modal fade" id="modalshow<?php echo $book->id;?>" tabindex="-1" role="dialog">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -321,37 +319,59 @@
                                 </div>
                                 <div class="modal-footer">
                                     <a class="btn btn-warning" href="{{ url('getData/employees/'.$book->id.'/edit')}}">Ganti</a>
+                                    <a class="btn btn-danger" data-toggle="modal" href="#" data-target="#modaldelete">Hapus</a>
+                                    <div class="modal fade" id="modal" tabindex="-1" role="dialog">
+                                        <div class="modal-dialog modal-sm" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title"><b>Perhatian</b></h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <input type="hidden" value="<?php echo $book->id;?>" name="id">
+                                                    <h5>Apakah Anda yakin akan menghapus data ini ?</h5>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Batal</button>
+                                                  <div class="divider"></div>
+                                                  <a class="btn btn-danger btn-simple" href="{{ action('HomeController@delete', $book->id) }}">Hapus</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   <!-- <td><a class="btn btn-primary" href="{{ url('getData/employees', $book->id)}}"><span class="glyphicon glyphicon-user"></a></td> -->
+                    <!--<td><a class="btn btn-primary" href="{{ action('HomeController@show', [$book->id])}}">Read</a></td>-->
+                    <!--<td><a class="btn btn-primary" href="/books/{{$book->id}}">Read</a></td>-->
+                    <td><a class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="Edit Data" href="{{ url('getData/employees/'.$book->id.'/edit')}}"><span class="glyphicon glyphicon-pencil"></a></td>
+                    <td><a class="btn btn-danger" data-toggle="modal" data-placement="bottom" title="Hapus Data" href="#" data-target="#modaldelete"><span class="glyphicon glyphicon-trash"></a></td>
+                    <div class="modal fade" id="modaldelete" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-sm" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <span style="..."><b>Perhatian</b></span>
+                                </div>
+                                
+                                <div class="modal-body">
+                                    <input type="hidden" value="<?php echo $book->id;?>" name="id">
+                                    <h5>Anda yakin ingin menghapus?</h5>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-info" data-dismiss="modal">Batal</button>
                                     <a class="btn btn-danger" href="{{ action('HomeController@delete', $book->id) }}">Hapus</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--<td><a class="btn btn-primary" href="{{ action('HomeController@show', [$book->id])}}">Read</a></td>-->
-                    <!--<td><a class="btn btn-primary" href="/books/{{$book->id}}">Read</a></td>-->
-                    <td><a class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="Edit Data"  href="{{ url('getData/employees/'.$book->id.'/edit')}}"><span class="glyphicon glyphicon-pencil"></a></td>
-                     <td><a class="btn btn-danger" data-toggle="modal" href="#" data-target="#modal" data-placement="bottom" title="Hapus Data"><span class="glyphicon glyphicon-trash"></a></td>
-                    </tr>   
-                        <div class="modal fade" id="modal" tabindex="-1" role="dialog">
-                            <div class="modal-dialog modal-sm" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                        <h4 class="modal-title"><b>Perhatian</b></h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <input type="hidden" value="<?php echo $book->id;?>" name="id">
-                                        <h5>Apakah Anda yakin akan menghapus data ini ?</h5>
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Batal</button>
-                                      <div class="divider"></div>
-                                      <a class="btn btn-danger btn-simple" href="{{ action('HomeController@delete', $book->id) }}">Hapus</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </tr>
                 @endforeach
             </tbody>
         </table>
@@ -359,11 +379,8 @@
         {!!$employees->appends(Request::only('kata_kunci'))->render()!!}
      </center>
     @else
-        <div class="col-xs-12">
-          <h4 class="text-center" >Data tidak ditemukan</h4>
-        </div>
+        There are no book in the book list
     @endif
-   
-  
 </div>
+<div class="col-md-2"></div>
 @stop
