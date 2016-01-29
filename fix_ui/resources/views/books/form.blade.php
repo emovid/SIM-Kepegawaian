@@ -19,7 +19,7 @@
 
 <h4><b>Data Pribadi</b></h4>
 <hr/>
-<div class="panel panel-group">
+<div class="panel-group">
 
 <div class="col-xs-12">
   <div class="col-xs-9">
@@ -105,7 +105,7 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
 
 <h4><b>Tanggal Mulai Tugas</b></h4>
 <hr/>
-<div class="panel panel-group">
+<div class="panel-group">
 <div class="col-xs-12">
   <div class="col-xs-4">
     <div class="form-group">
@@ -145,7 +145,7 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
 
 <h4><b>Jabatan & Kedudukan</b></h4>
 <hr/>
-<div class="panel panel-group">
+<div class="panel-group">
 
 <div class="col-xs-12">
   <div class="col-xs-6">
@@ -233,13 +233,14 @@ foreach($pilihan as $opsi){
 
 
 
-    {!! Form::select('pangkat', [$pngkt[0]=>'Pilih pangkat',
+    {!! Form::select('pangkat', [$pngkt[0]=>$pngkt[0],
                                  $pngkt[1]=>$pngkt[1],
                                  $pngkt[2]=>$pngkt[2],
                                  $pngkt[3]=>$pngkt[3],
                                  $pngkt[4]=>$pngkt[4],
                                  $pngkt[5]=>$pngkt[5],
-                                 $pngkt[6]=>$pngkt[7],
+                                 $pngkt[6]=>$pngkt[6],
+                                 $pngkt[7]=>$pngkt[8],
                                  $pngkt[8]=>$pngkt[8],
                                  $pngkt[9]=>$pngkt[9],
                                  $pngkt[10]=>$pngkt[10],
@@ -281,7 +282,7 @@ foreach($pilihan as $opsi){
   
 <h4><b>Pendidikan</b></h4>
 <hr/>
-<div class="panel panel-group">
+<div class="panel-group">
   
 <div class="col-xs-12">
   <div class="col-xs-4">
@@ -322,7 +323,7 @@ foreach($pilihan as $opsi){
 
 <h4><b>Status Pernikahan</b></h4>
 <hr/>
-<div class="panel panel-group">
+<div class="panel-group">
   <div class="col-xs-12">
     <div class="col-xs-3">
     <div class="form-group">
