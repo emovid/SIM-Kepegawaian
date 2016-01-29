@@ -73,12 +73,32 @@
                     <td>{{ $book->pendidikan_jurusan }}</td>
                     <td>{{ $book->status }}</td>   -->
                     
-                   <td><a class="btn btn-primary" href="{{ url('getData/employees', $book->id)}}"><span class="glyphicon glyphicon-user"></a></td>
+                   <td><a class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Lihat Data"  href="{{ url('getData/employees', $book->id)}}"><span class="glyphicon glyphicon-user"></a></td>
                     <!--<td><a class="btn btn-primary" href="{{ action('HomeController@show', [$book->id])}}">Read</a></td>-->
                     <!--<td><a class="btn btn-primary" href="/books/{{$book->id}}">Read</a></td>-->
-                    <td><a class="btn btn-warning" href="{{ url('getData/employees/'.$book->id.'/edit')}}"><span class="glyphicon glyphicon-pencil"></a></td>
-                    <td><a class="btn btn-danger" href="{{ action('HomeController@delete', $book->id) }}"><span class="glyphicon glyphicon-trash"></a></td>
-                </tr>
+                    <td><a class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="Edit Data"  href="{{ url('getData/employees/'.$book->id.'/edit')}}"><span class="glyphicon glyphicon-pencil"></a></td>
+                     <td><a class="btn btn-danger" data-toggle="modal" href="#" data-target="#modal" data-placement="bottom" title="Hapus Data"><span class="glyphicon glyphicon-trash"></a></td>
+                    </tr>   
+                        <div class="modal fade" id="modal" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-sm" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <span style="..."><b>Perhatian</b></span>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="hidden" value="<?php echo $book->id;?>" name="id">
+                                        <h5>Apakah Anda yakin akan menghapus data ini ?</h5>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-info" data-dismiss="modal">Tidak</button>
+                                        <a class="btn btn-danger" href="{{ action('HomeController@delete', $book->id) }}">Hapus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 @endforeach
             </tbody>
         </table>
