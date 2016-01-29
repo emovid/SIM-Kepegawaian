@@ -32,13 +32,19 @@
     <div class="form-group">
       {!! Form::label('Jenis Kelamin', 'Jenis Kelamin') !!}
 <?php
-      $jenis_kelamin=$book->jenis_kelamin;
-      $pilihan='Wanita';
-      if($jenis_kelamin=='Wanita'){
-        $pilihan='Pria';
+      
+    if(isset($book->jenis_kelamin)) {
+       $jenis_kelamin=$book->jenis_kelamin;
       }
+    else{$jenis_kelamin='Pria';}
+      
+    $pilihan='Wanita';
+
+    if($jenis_kelamin=='Wanita' || $jenis_kelamin=='WANITA'){
+        $pilihan='Pria';
+    }
 ?>
-      {!! Form::select('jenis_kelamin', [$jenis_kelamin, $pilihan], null, ['class'=>'form-control']) !!}
+      {!! Form::select('jenis_kelamin', [$jenis_kelamin => $jenis_kelamin, $pilihan => $pilihan], null, ['class'=>'form-control']) !!}
     </div>
   </div>
 </div>
@@ -46,7 +52,55 @@
   <div class="col-xs-4">
     <div class="form-group">
     {!! Form::label('Agama', 'Agama') !!}
-    {!! Form::text('agama', null, ['class'=> 'form-control']) !!}
+    
+<?php
+      
+    if(isset($book->agama)) {
+       $agama=$book->agama;
+      }
+    else{$agama='ISLAM';}
+
+    $pilihan1='KATHOLIK';
+    $pilihan2='KRISTEN';
+    $pilihan3='HINDU';
+    $pilihan4='BUDHA';
+    
+
+    switch ($agama) {
+    case "KATHOLIK":
+    $pilihan1='ISLAM';
+    $pilihan2='KRISTEN';
+    $pilihan3='HINDU';
+    $pilihan4='BUDHA';
+    break;
+    case "HINDU":
+    $pilihan1='ISLAM';
+    $pilihan2='KRISTEN';
+    $pilihan3='KATHOLIK';
+    $pilihan4='BUDHA';
+    break;
+    case "BUDHA":
+    $pilihan1='ISLAM';
+    $pilihan2='KRISTEN';
+    $pilihan3='KATHOLIK';
+    $pilihan4='BUDHA';
+    break;
+    case "KRISTEN":
+    $pilihan1='ISLAM';
+    $pilihan2='HINDU';
+    $pilihan3='KATHOLIK';
+    $pilihan4='BUDHA';
+    break;
+  }
+    
+
+?>
+
+    {!! Form::select('agama', [$agama => $agama, 
+                              $pilihan1 => $pilihan1,
+                              $pilihan2 => $pilihan2,
+                              $pilihan3 => $pilihan3,
+                              $pilihan4 => $pilihan4], null, ['class'=>'form-control']) !!}
     </div>
   </div>
   <div class="col-xs-4">
@@ -102,7 +156,53 @@
   <div class="col-xs-6">
     <div class="form-group">
     {!! Form::label('Golongan', 'Golongan') !!}
-    {!! Form::text('golongan', null, ['class'=> 'form-control']) !!}
+
+    <?php
+      
+    if(isset($book->golongan)) {
+       $golongan=$book->golongan;
+      }
+    else{$golongan='I/a';}
+
+    $pilihan =array('Pilih Golongan','I/a','I/b','I/c','I/d','I/e','II/a','II/b','II/c','II/d','II/e','III/a','III/b','III/c','III/d','III/e','IV/a','IV/b','IV/c','IV/d','IV/e');
+
+foreach($pilihan as $opsi){
+  if($opsi == $golongan){
+    $pilihan[0]=$opsi;
+  }
+}
+     
+    
+?>
+
+{!! Form::select('golongan', [
+                              $pilihan[0] => $pilihan[0], 
+                              $pilihan[1] => $pilihan[1],
+                              $pilihan[2] => $pilihan[2],
+                              $pilihan[3] => $pilihan[3],
+                              $pilihan[4] => $pilihan[4],
+
+                              $pilihan[5] => $pilihan[5], 
+                              $pilihan[6] => $pilihan[6],
+                              $pilihan[7] => $pilihan[7],
+                              $pilihan[8] => $pilihan[8],
+                              $pilihan[9] => $pilihan[9],
+
+
+                              $pilihan[10] => $pilihan[10], 
+                              $pilihan[11] => $pilihan[11],
+                              $pilihan[12] => $pilihan[12],
+                              $pilihan[13] => $pilihan[13],
+                              $pilihan[14] => $pilihan[14],
+
+                              $pilihan[15] => $pilihan[15], 
+                              $pilihan[16] => $pilihan[16],
+                              $pilihan[17] => $pilihan[17],
+                              $pilihan[18] => $pilihan[18],
+                              $pilihan[19] => $pilihan[19],
+                              $pilihan[20] => $pilihan[20]
+                              
+                              ], null,['class'=>'form-control']) !!}
     </div>
   </div>
 </div>
