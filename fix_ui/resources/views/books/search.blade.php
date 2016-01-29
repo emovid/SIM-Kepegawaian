@@ -24,6 +24,7 @@
                     <th>NIP</th>
                    <!-- <th>No Karpeg</th> -->
                     <th>Nama</th>
+                  <th>Unit Kerja</th>
                   <!--  <th>Jenis Kelamin</th>
                     <th>Agama</th>
                     <th>Tempat Lahir</th>
@@ -33,8 +34,8 @@
                     <th>TMT Pangkat Terakhir</th>
                     <th>Golongan</th>
                     <th>Jabatan</th>
-                    <th>Unit Kerja</th>
-                    <th>Instansi</th>
+                    
+                    <th>Instansi</th>  
                     <th>Pendidikan Terakhir</th>
                     <th>Pendidikan Tahun Lulus</th>
                     <th>Pendidikan Univ</th>
@@ -54,6 +55,8 @@
                     <td>{{ $book->nip }}</td>
        <!--             <td>{{ $book->no_karpeg }}</td> -->
                     <td>{{ $book->nama }}</td>
+          
+                    <td>{{ $book->unit_kerja }}</td>
           <!--          <td>{{ $book->jenis_kelamin }}</td>
                     <td>{{ $book->agama }}</td>
                     <td>{{ $book->tempat_lahir }}</td>
@@ -63,7 +66,7 @@
                     <td>{{ $book->tmt_pangkat_terakhir }}</td>
                     <td>{{ $book->golongan }}</td>
                     <td>{{ $book->jabatan }}</td>
-                    <td>{{ $book->unit_kerja }}</td>
+                    
                     <td>{{ $book->instansi}}</td>
                     <td>{{ $book->pendidikan_terakhir }}</td>
                     <td>{{ $book->pendidikan_tahun_lulus }}</td>
