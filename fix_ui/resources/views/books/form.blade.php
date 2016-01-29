@@ -1,6 +1,6 @@
 <h4><b>Nomor Identitas</b></h4>
 <hr/>
-<div class="panel panel-group">
+<div class="panel-group">
 <div class="col-xs-12">
   <div class="col-xs-6">
     <div class="form-group">
