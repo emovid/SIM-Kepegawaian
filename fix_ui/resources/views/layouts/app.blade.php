@@ -8,7 +8,7 @@
   <title>SIM-Kepegawaian Dinas Pendidikan DIY</title>
   <meta name="author" content="Vinsensius Satya, Yosef Brian, Misbach Imaduddin">
 
-  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="shortcut icon" href="{{ URL::asset('img/favicon.ico') }}">
 
   <!-- Fonts -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
@@ -16,8 +16,8 @@
 
   <!-- Styles -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/get-shit-done.css" rel="stylesheet" />  
-  <link href="css/demo.css" rel="stylesheet">
+  <link href="{{ URL::asset('css/get-shit-done.css') }}" rel="stylesheet" />  
+  <link href="{{ URL::asset('css/demo.css') }}" rel="stylesheet">
   @yield('head.style')
 
   @yield('head.script')

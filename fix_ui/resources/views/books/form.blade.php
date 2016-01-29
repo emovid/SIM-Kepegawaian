@@ -1,6 +1,6 @@
-<h4><b>Nomor Identitas</b></h4>
+<h5><b>Nomor Identitas</b></h5>
 <hr/>
-<div class="panel panel-group">
+<div class="panel-group">
 <div class="col-xs-12">
   <div class="col-xs-6">
     <div class="form-group">
@@ -17,9 +17,9 @@
 </div>
 </div>
 
-<h4><b>Data Pribadi</b></h4>
+<h5><b>Data Pribadi</b></h5>
 <hr/>
-<div class="panel panel-group">
+<div class="panel-group">
 
 <div class="col-xs-12">
   <div class="col-xs-9">
@@ -103,9 +103,9 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
 </div>
 </div>  
 
-<h4><b>Tanggal Mulai Tugas</b></h4>
+<h5><b>Tanggal Mulai Tugas</b></h5>
 <hr/>
-<div class="panel panel-group">
+<div class="panel-group">
 <div class="col-xs-12">
   <div class="col-xs-4">
     <div class="form-group">
@@ -143,9 +143,9 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
   </div>
 </div>
 
-<h4><b>Jabatan & Kedudukan</b></h4>
+<h5><b>Jabatan & Kedudukan</b></h5>
 <hr/>
-<div class="panel panel-group">
+<div class="panel-group">
 
 <div class="col-xs-12">
   <div class="col-xs-6">
@@ -154,8 +154,21 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
     {!! Form::text('jabatan', null, ['class'=> 'form-control']) !!}
     </div>
   </div>
+  
+  <div class="col-xs-2">
+    <div class="form-group">
+    {!! Form::label('Golongan', 'Golongan') !!}
 
+    <?php
+      
+    if(isset($book->golongan)) {
+       $golongan=$book->golongan;
+      }
+    else{$golongan='I/a';}
 
+    $pilihan =array('Pilih Golongan','I/a','I/b','I/c','I/d','II/a','II/b','II/c','II/d','III/a','III/b','III/c','III/d','IV/a','IV/b','IV/c','IV/d','IV/e');
+
+<<<<<<< HEAD
 
 
   <div class="col-xs-6">
@@ -207,13 +220,56 @@ foreach($pilihan as $opsi){
     </div>
   </div>
   <div class="col-xs-6">
+=======
+    foreach($pilihan as $opsi){
+      if($opsi == $golongan){
+        $pilihan[0]=$opsi;
+      }
+    }
+
+
+    ?>
+
+    {!! Form::select('golongan', [
+                                  $pilihan[0] => 'Pilih Golongan', 
+                                  $pilihan[1] => $pilihan[1],
+                                  $pilihan[2] => $pilihan[2],
+                                  $pilihan[3] => $pilihan[3],
+                                  $pilihan[4] => $pilihan[4],
+
+                                  $pilihan[5] => $pilihan[5], 
+                                  $pilihan[6] => $pilihan[6],
+                                  $pilihan[7] => $pilihan[7],
+                                  $pilihan[8] => $pilihan[8],
+                                  $pilihan[9] => $pilihan[9],
+
+
+                                  $pilihan[10] => $pilihan[10], 
+                                  $pilihan[11] => $pilihan[11],
+                                  $pilihan[12] => $pilihan[12],
+                                  $pilihan[13] => $pilihan[13],
+                                  $pilihan[14] => $pilihan[14],
+
+                                  $pilihan[15] => $pilihan[15], 
+                                  $pilihan[16] => $pilihan[16],
+                                  $pilihan[17] => $pilihan[17] 
+                                  ], null,['class'=>'form-control']) !!}
+    </div>
+  </div>
+
+  <div class="col-xs-4">
+>>>>>>> origin/master
     <div class="form-group">
     {!! Form::label('Pangkat', 'Pangkat') !!}
     
 
     <?php 
+<<<<<<< HEAD
 
    if(isset($book->pangkat)) {
+=======
+    if(isset($book->pangkat)) {
+>>>>>>> origin/master
        $pangkat=$book->pangkat;
       }  
       else{$pangkat='Juru Muda';}
@@ -228,8 +284,12 @@ foreach($pilihan as $opsi){
 }
 
 
+<<<<<<< HEAD
 
    ?>
+=======
+    ?>
+>>>>>>> origin/master
 
 
 
@@ -250,6 +310,7 @@ foreach($pilihan as $opsi){
                                  $pngkt[15]=>$pngkt[15],
                                  $pngkt[16]=>$pngkt[16],
                                  $pngkt[17]=>$pngkt[17]
+<<<<<<< HEAD
                                   ], null, ['class'=> 'form-control', 'id'=>'pangkat']) !!}
 
 
@@ -261,6 +322,11 @@ foreach($pilihan as $opsi){
 
 
 
+=======
+                                  ], null, ['class'=> 'form-control']) !!}
+    </div>
+  </div>
+>>>>>>> origin/master
 </div>
 
 
@@ -279,9 +345,9 @@ foreach($pilihan as $opsi){
   </div>
 </div>
   
-<h4><b>Pendidikan</b></h4>
+<h5><b>Pendidikan</b></h5>
 <hr/>
-<div class="panel panel-group">
+<div class="panel-group">
   
 <div class="col-xs-12">
   <div class="col-xs-4">
@@ -320,9 +386,9 @@ foreach($pilihan as $opsi){
 </div>
 </div>
 
-<h4><b>Status Pernikahan</b></h4>
+<h5><b>Status Pernikahan</b></h5>
 <hr/>
-<div class="panel panel-group">
+<div class="panel-group">
   <div class="col-xs-12">
     <div class="col-xs-3">
     <div class="form-group">
@@ -364,5 +430,6 @@ foreach($pilihan as $opsi){
     {!! Form::submit($submitTextButton, array('class' => 'btn btn-warning')) !!}
     </div>
 </div>
+
  
 
