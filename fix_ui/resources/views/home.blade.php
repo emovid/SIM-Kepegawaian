@@ -125,15 +125,14 @@
                        
                   </form>
                     <div class="col-xs-7">
-                        <h4>Keterangan</h4>
+                        <h4>Petunjuk Penggunaan</h4>
                         <ol>
                           <li>Pilih jenis surat yang akan dibuat</li>
-                          <li>Masukkan Nomor Surat</li>
+                          <li>Masukkan penerima surat</li>
                           <li>Masukkan NIP</li>
-                          <li>Masukkan data lain yang diperlukan</li>
-                          <li>Klik Merge</li>
+                          <li>Klik Cetak</li>
                         </ol>
-                        <p>Setelah Anda memilih Merge maka file akan otomatis terunduh melalui browser yang Anda gunakan saat ini.</p>                            
+                        <p>Setelah Anda memilih cetak maka file akan otomatis terunduh melalui browser yang Anda gunakan saat ini.</p>                            
                         
                       
                     </div>
