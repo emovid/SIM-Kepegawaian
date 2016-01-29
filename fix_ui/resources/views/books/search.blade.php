@@ -2,20 +2,18 @@
 
 @section('content.getData')
 
-<div class="col-xs-4">
-  <div class="form-group">
+<div class="col-xs-12">
+  <a class="btn btn-primary" href="{{ url('getData')}}">Kembali</a>
+  <div class="form-group" style="float:right">
   {!! Form::open(['url'=>'getData/search', 'class'=>'form-group']) !!}  
-    {!! Form::text('kata_kunci',null,['class'=>'form-control','placeholder'=>'Keywords']) !!}
-    <button class="btn btn-round glyphicon glyphicon-search" type="submit"></button>
+    <div class="col-xs-9">{!! Form::text('kata_kunci',null,['class'=>'form-control','placeholder'=>'Keywords']) !!}</div>
+    <button type="submit" class="btn btn-default"><span class="fa fa-search"></span></button>
   {!! Form::close() !!}
-  
   </div>
 </div>
-<div class="col-xs-6"></div>
-<div class="col-cs-2"><a href="{{ url('getData/employees/create') }}" class="btn btn-primary">Tambah Pegawai</a></div>
 
 
-
+<div>
     @if ($employees->count())
         <table class="table table-striped">
             <thead>
@@ -88,8 +86,11 @@
         {!!$employees->appends(Request::only('kata_kunci'))->render()!!}
      </center>
     @else
-        There are no book in the book list
+        <div class="col-xs-12">
+          <h4 class="text-center" >Data tidak ditemukan</h4>
+        </div>
     @endif
+   
+  
 </div>
-<div class="col-md-2"></div>
 @stop
