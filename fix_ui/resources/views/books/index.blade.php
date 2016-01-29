@@ -96,7 +96,7 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
-                                    <span style="..."><b>Detil Pegawai</b></span>
+                                    <h4 class="modal-title"><b>Detil Pegawai</b></h4>
                                 </div>
                                 <div class="modal-body">
                                     <input type="hidden" value="<?php echo $book->id;?>" name="id">
@@ -335,8 +335,9 @@
                                 </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <a class="btn btn-warning" href="{{ url('getData/employees/'.$book->id.'/edit')}}">Ganti</a>
-                                    <a class="btn btn-danger" href="{{ action('HomeController@delete', $book->id) }}">Hapus</a>
+                                    <a class="btn btn-warning btn-simple" href="{{ url('getData/employees/'.$book->id.'/edit')}}">Ganti</a>
+                                    <div class="divider"></div>
+                                    <a class="btn btn-danger btn-simple" href="{{ action('HomeController@delete', $book->id) }}">Hapus</a>
                                 </div>
                             </div>
                         </div>
@@ -352,16 +353,17 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
-                                    <span style="..."><b>Perhatian</b></span>
+                                    <h4 class="modal-title"><b>Perhatian</b></h4>
                                 </div>
                                 
                                 <div class="modal-body">
                                     <input type="hidden" value="<?php echo $book->id;?>" name="id">
-                                    <h5>Anda yakin ingin menghapus?</h5>
+                                    <h5>Apakah Anda yakin akan mengahpus data ini?</h5>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-info" data-dismiss="modal">Batal</button>
-                                    <a class="btn btn-danger" href="{{ action('HomeController@delete', $book->id) }}">Hapus</a>
+                                    <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Batal</button>
+                                    <div class="divider"></div>
+                                    <a class="btn btn-danger btn-simple" href="{{ action('HomeController@delete', $book->id) }}">Hapus</a>
                                 </div>
                             </div>
                         </div>
