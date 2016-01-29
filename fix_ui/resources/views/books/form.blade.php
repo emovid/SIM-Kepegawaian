@@ -60,47 +60,22 @@
       }
     else{$agama='ISLAM';}
 
-    $pilihan1='KATHOLIK';
-    $pilihan2='KRISTEN';
-    $pilihan3='HINDU';
-    $pilihan4='BUDHA';
-    
+$agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
 
-    switch ($agama) {
-    case "KATHOLIK":
-    $pilihan1='ISLAM';
-    $pilihan2='KRISTEN';
-    $pilihan3='HINDU';
-    $pilihan4='BUDHA';
-    break;
-    case "HINDU":
-    $pilihan1='ISLAM';
-    $pilihan2='KRISTEN';
-    $pilihan3='KATHOLIK';
-    $pilihan4='BUDHA';
-    break;
-    case "BUDHA":
-    $pilihan1='ISLAM';
-    $pilihan2='KRISTEN';
-    $pilihan3='KATHOLIK';
-    $pilihan4='BUDHA';
-    break;
-    case "KRISTEN":
-    $pilihan1='ISLAM';
-    $pilihan2='HINDU';
-    $pilihan3='KATHOLIK';
-    $pilihan4='BUDHA';
-    break;
+    foreach($agm as $ag){
+  if($ag == $agama){
+    $agm[0]=$agama;      
   }
-    
+}    
 
 ?>
 
-    {!! Form::select('agama', [$agama => $agama, 
-                              $pilihan1 => $pilihan1,
-                              $pilihan2 => $pilihan2,
-                              $pilihan3 => $pilihan3,
-                              $pilihan4 => $pilihan4], null, ['class'=>'form-control']) !!}
+    {!! Form::select('agama', [$agm[0] => 'Pilih agama', 
+                              $agm[1] => $agm[1],
+                              $agm[2] => $agm[2],
+                              $agm[3] => $agm[3],
+                              $agm[4] => $agm[4],
+                              $agm[5] => $agm[5]], null, ['class'=>'form-control']) !!}
     </div>
   </div>
   <div class="col-xs-4">
@@ -153,6 +128,56 @@
     {!! Form::text('jabatan', null, ['class'=> 'form-control']) !!}
     </div>
   </div>
+
+
+  <div class="col-xs-6">
+    <div class="form-group">
+    {!! Form::label('Pangkat', 'Pangkat') !!}
+    
+
+    <?php 
+    if(isset($book->pangkat)) {
+       $pangkat=$book->pangkat;
+      }  
+      else{$pangkat='Juru Muda';}
+
+
+    $pngkt = array('', 'Juru Muda', 'Juru Muda Tk I', 'Juru', 'Juru Tk I', 'Pengatur Muda', 'Pengatur Muda Tk I', 'Pengatur', 'Pengatur Tk I', 'Penata Muda', 'Penata Muda Tk I', 'Penata', 'Penata Tk 1', 'Pembina', 'Pembina Tk 1', 'Pembina Utama Muda', 'Pembina Utama Madya', 'Pembina Utama');    
+
+    foreach($pngkt as $pgkt){
+  if($pgkt == $pangkat){
+    $pngkt[0]=$pangkat;      
+  }
+}
+
+
+    ?>
+
+
+
+    {!! Form::select('pangkat', [$pngkt[0]=>'Pilih pangkat',
+                                 $pngkt[1]=>$pngkt[1],
+                                 $pngkt[2]=>$pngkt[2],
+                                 $pngkt[3]=>$pngkt[3],
+                                 $pngkt[4]=>$pngkt[4],
+                                 $pngkt[5]=>$pngkt[5],
+                                 $pngkt[6]=>$pngkt[7],
+                                 $pngkt[8]=>$pngkt[8],
+                                 $pngkt[9]=>$pngkt[9],
+                                 $pngkt[10]=>$pngkt[10],
+                                 $pngkt[11]=>$pngkt[11],
+                                 $pngkt[12]=>$pngkt[12],
+                                 $pngkt[13]=>$pngkt[13],
+                                 $pngkt[14]=>$pngkt[14],
+                                 $pngkt[15]=>$pngkt[15],
+                                 $pngkt[16]=>$pngkt[16],
+                                 $pngkt[17]=>$pngkt[17]
+                                  ], null, ['class'=> 'form-control']) !!}
+    </div>
+  </div>
+
+
+
   <div class="col-xs-6">
     <div class="form-group">
     {!! Form::label('Golongan', 'Golongan') !!}
@@ -164,7 +189,7 @@
       }
     else{$golongan='I/a';}
 
-    $pilihan =array('Pilih Golongan','I/a','I/b','I/c','I/d','I/e','II/a','II/b','II/c','II/d','II/e','III/a','III/b','III/c','III/d','III/e','IV/a','IV/b','IV/c','IV/d','IV/e');
+    $pilihan =array('Pilih Golongan','I/a','I/b','I/c','I/d','II/a','II/b','II/c','II/d','III/a','III/b','III/c','III/d','IV/a','IV/b','IV/c','IV/d','IV/e');
 
 foreach($pilihan as $opsi){
   if($opsi == $golongan){
@@ -176,7 +201,7 @@ foreach($pilihan as $opsi){
 ?>
 
 {!! Form::select('golongan', [
-                              $pilihan[0] => $pilihan[0], 
+                              $pilihan[0] => 'Pilih Golongan', 
                               $pilihan[1] => $pilihan[1],
                               $pilihan[2] => $pilihan[2],
                               $pilihan[3] => $pilihan[3],
@@ -197,11 +222,7 @@ foreach($pilihan as $opsi){
 
                               $pilihan[15] => $pilihan[15], 
                               $pilihan[16] => $pilihan[16],
-                              $pilihan[17] => $pilihan[17],
-                              $pilihan[18] => $pilihan[18],
-                              $pilihan[19] => $pilihan[19],
-                              $pilihan[20] => $pilihan[20]
-                              
+                              $pilihan[17] => $pilihan[17] 
                               ], null,['class'=>'form-control']) !!}
     </div>
   </div>
@@ -269,7 +290,31 @@ foreach($pilihan as $opsi){
     <div class="col-xs-3">
     <div class="form-group">
         {!! Form::label('Status', 'Status') !!}
-        {!! Form::text('status', null, ['class'=> 'form-control']) !!}
+
+<?php 
+    if(isset($book->status)) {
+       $status=$book->status;
+      }  
+     else{$status='KAWIN';}
+   
+   $stat = array('', 'KAWIN', 'BELUM KAWIN', 'TIDAK KAWIN', 'JANDA', 'DUDA');
+    foreach($stat as $sta){
+  if($sta == $status){
+    $stat[0]=$status;      
+  }
+}
+?>
+  
+        {!! Form::select('status', [$stat[0]=>'Pilih status',
+                                    $stat[1]=>$stat[1],
+                                    $stat[2]=>$stat[2],
+                                    $stat[3]=>$stat[3],
+                                    $stat[4]=>$stat[4],
+                                    $stat[5]=>$stat[5]
+                                    ], null, ['class'=> 'form-control']) !!}
+
+
+
     </div>
     </div>
   </div>
