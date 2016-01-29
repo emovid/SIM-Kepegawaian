@@ -1,7 +1,7 @@
 @extends('getData')
 
 @section('content.getData')
-<h1>Detail Pegawai</h1>
+<h3>Detail Pegawai</h3>
 <hr/>
 <div class="panel panel-group">
     <div class="panel-body">

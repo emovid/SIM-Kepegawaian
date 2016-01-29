@@ -2,7 +2,7 @@
 
 @section('content.getData')
 <div>
-<h1>Perbarui Data Pegawai</h1>
+<h3>Perbarui Data Pegawai</h3>
 <br>
 <!--{!! Form::open(['method' => 'PATCH', 'url' => 'books/' . $book->id]) !!}-->
 {!! Form::model($book, ['method' => 'PATCH', 'action' => ['HomeController@update', $book->id] ]) !!}

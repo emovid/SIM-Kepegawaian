@@ -16,8 +16,8 @@
 
   <!-- Styles -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/get-shit-done.css" rel="stylesheet" />  
-  <link href="css/demo.css" rel="stylesheet">
+  <link href="{{ URL::asset('css/get-shit-done.css') }}" rel="stylesheet" />  
+  <link href="{{ URL::asset('css/demo.css') }}" rel="stylesheet">
   @yield('head.style')
 
   @yield('head.script')
