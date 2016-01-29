@@ -86,8 +86,18 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
   </div>
   <div class="col-xs-4">
     <div class="form-group">
+    
+
+    <?php if(isset($book->tanggal_lahir)) {
+       $tanggal_lahir=substr($book->tanggal_lahir,0,11);
+      }
+            else{
+        $tanggal_lahir='';
+      }
+      ?>
     {!! Form::label('Tanggal Lahir', 'Tanggal Lahir') !!}
-    {!! Form::text('tanggal_lahir', null, ['class'=> 'form-control']) !!}
+    {!! Form::text('tanggal_lahir', $tanggal_lahir, ['class'=> 'form-control']) !!}
+
     </div>
   </div>
 </div>
@@ -99,8 +109,17 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
 <div class="col-xs-12">
   <div class="col-xs-4">
     <div class="form-group">
+
+
+    <?php if(isset($book->tmt_cpns)) {
+       $tmt_cpns=substr($book->tmt_cpns,0,11);
+      }
+            else{
+        $tmt_cpns='';
+      }
+      ?>
     {!! Form::label('TMT CPNS', 'TMT CPNS') !!}
-    {!! Form::text('tmt_cpns', null, ['class'=> 'form-control']) !!}
+    {!! Form::text('tmt_cpns', $tmt_cpns, ['class'=> 'form-control']) !!}
     </div>
   </div>
   <div class="col-xs-4">
@@ -111,8 +130,15 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
   </div>
   <div class="col-xs-4">
     <div class="form-group">
+    <?php if(isset($book->tmt_pangkat_terakhir)) {
+       $tmt_pangkat_terakhir=substr($book->tmt_pangkat_terakhir,0,11);
+      }
+      else{
+        $tmt_pangkat_terakhir='';
+      }
+      ?>
     {!! Form::label('TMT Pangkat Terakhir', 'TMT Pangkat Terakhir') !!}
-    {!! Form::text('tmt_pangkat_terakhir', null, ['class'=> 'form-control']) !!}
+    {!! Form::text('tmt_pangkat_terakhir', $tmt_pangkat_terakhir, ['class'=> 'form-control']) !!}
     </div>
   </div>
 </div>
@@ -129,52 +155,6 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
     </div>
   </div>
 
-
-  <div class="col-xs-6">
-    <div class="form-group">
-    {!! Form::label('Pangkat', 'Pangkat') !!}
-    
-
-    <?php 
-    if(isset($book->pangkat)) {
-       $pangkat=$book->pangkat;
-      }  
-      else{$pangkat='Juru Muda';}
-
-
-    $pngkt = array('', 'Juru Muda', 'Juru Muda Tk I', 'Juru', 'Juru Tk I', 'Pengatur Muda', 'Pengatur Muda Tk I', 'Pengatur', 'Pengatur Tk I', 'Penata Muda', 'Penata Muda Tk I', 'Penata', 'Penata Tk 1', 'Pembina', 'Pembina Tk 1', 'Pembina Utama Muda', 'Pembina Utama Madya', 'Pembina Utama');    
-
-    foreach($pngkt as $pgkt){
-  if($pgkt == $pangkat){
-    $pngkt[0]=$pangkat;      
-  }
-}
-
-
-    ?>
-
-
-
-    {!! Form::select('pangkat', [$pngkt[0]=>'Pilih pangkat',
-                                 $pngkt[1]=>$pngkt[1],
-                                 $pngkt[2]=>$pngkt[2],
-                                 $pngkt[3]=>$pngkt[3],
-                                 $pngkt[4]=>$pngkt[4],
-                                 $pngkt[5]=>$pngkt[5],
-                                 $pngkt[6]=>$pngkt[7],
-                                 $pngkt[8]=>$pngkt[8],
-                                 $pngkt[9]=>$pngkt[9],
-                                 $pngkt[10]=>$pngkt[10],
-                                 $pngkt[11]=>$pngkt[11],
-                                 $pngkt[12]=>$pngkt[12],
-                                 $pngkt[13]=>$pngkt[13],
-                                 $pngkt[14]=>$pngkt[14],
-                                 $pngkt[15]=>$pngkt[15],
-                                 $pngkt[16]=>$pngkt[16],
-                                 $pngkt[17]=>$pngkt[17]
-                                  ], null, ['class'=> 'form-control']) !!}
-    </div>
-  </div>
 
 
 
@@ -223,10 +203,67 @@ foreach($pilihan as $opsi){
                               $pilihan[15] => $pilihan[15], 
                               $pilihan[16] => $pilihan[16],
                               $pilihan[17] => $pilihan[17] 
-                              ], null,['class'=>'form-control']) !!}
+                              ], null,['class'=>'form-control', 'id'=>'golongan']) !!}
     </div>
   </div>
+  <div class="col-xs-6">
+    <div class="form-group">
+    {!! Form::label('Pangkat', 'Pangkat') !!}
+    
+
+    <?php 
+
+   if(isset($book->pangkat)) {
+       $pangkat=$book->pangkat;
+      }  
+      else{$pangkat='Juru Muda';}
+
+
+    $pngkt = array('', 'Juru Muda', 'Juru Muda Tk I', 'Juru', 'Juru Tk I', 'Pengatur Muda', 'Pengatur Muda Tk I', 'Pengatur', 'Pengatur Tk I', 'Penata Muda', 'Penata Muda Tk I', 'Penata', 'Penata Tk 1', 'Pembina', 'Pembina Tk 1', 'Pembina Utama Muda', 'Pembina Utama Madya', 'Pembina Utama');    
+
+    foreach($pngkt as $pgkt){
+  if($pgkt == $pangkat){
+    $pngkt[0]=$pangkat;      
+  }
+}
+
+
+
+   ?>
+
+
+
+    {!! Form::select('pangkat', [$pngkt[0]=>'Pilih pangkat',
+                                 $pngkt[1]=>$pngkt[1],
+                                 $pngkt[2]=>$pngkt[2],
+                                 $pngkt[3]=>$pngkt[3],
+                                 $pngkt[4]=>$pngkt[4],
+                                 $pngkt[5]=>$pngkt[5],
+                                 $pngkt[6]=>$pngkt[7],
+                                 $pngkt[8]=>$pngkt[8],
+                                 $pngkt[9]=>$pngkt[9],
+                                 $pngkt[10]=>$pngkt[10],
+                                 $pngkt[11]=>$pngkt[11],
+                                 $pngkt[12]=>$pngkt[12],
+                                 $pngkt[13]=>$pngkt[13],
+                                 $pngkt[14]=>$pngkt[14],
+                                 $pngkt[15]=>$pngkt[15],
+                                 $pngkt[16]=>$pngkt[16],
+                                 $pngkt[17]=>$pngkt[17]
+                                  ], null, ['class'=> 'form-control', 'id'=>'pangkat']) !!}
+
+
+    </div>
+
+
+  </div>
+
+
+
+
 </div>
+
+
 <div class="col-xs-12">
   <div class="col-xs-6">
     <div class="form-group">
