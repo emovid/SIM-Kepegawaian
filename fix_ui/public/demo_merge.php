@@ -79,9 +79,9 @@ switch ($bulan) {
         $tanggal=$hari."Bulan".$tahun;;
 }
 
-$nomor_surat = (isset($_POST['nomor_surat'])) ? $_POST['nomor_surat'] : '';
-$nomor_surat = trim(''.$nomor_surat);
-if ($nomor_surat=='') $nomor_surat = "(nomor surat)";
+$kepada = (isset($_POST['kepada'])) ? $_POST['kepada'] : '';
+$kepada = trim(''.$kepada);
+if ($kepada=='') $kepada = "(kepada)";
 
 
 

@@ -52,8 +52,8 @@
                       </select>
                     </div>
                        <div class="form-group" >
-                       <label class="control-label" for="nomor_surat">Nomor Surat</label>
-                            <input name="nomor_surat" id="nomor_surat" type="text" class="form-control"/>
+                       <label class="control-label" for="kepada">Kepada</label>
+                            <input name="kepada" id="kepada" type="text" class="form-control"/>
                       </div>
 
 
